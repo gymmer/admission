@@ -86,14 +86,44 @@ i.fa {
     height: auto;
 }
 
+
 /* 动画延时 */
-.delay-01s { animation-delay: 0.1s; -webkit-animation-delay: 0.1s; }
-.delay-02s { animation-delay: 0.2s; -webkit-animation-delay: 0.2s; }
-.delay-04s { animation-delay: 0.4s; -webkit-animation-delay: 0.4s; }
-.delay-05s { animation-delay: 0.5s; -webkit-animation-delay: 0.5s; }
-.delay-1s { animation-delay: 1s; -webkit-animation-delay: 1s; }
-.delay-1-5s { animation-delay: 1.5s; -webkit-animation-delay: 1.5s; }
-.delay-2s { animation-delay: 2s; -webkit-animation-delay: 2s; }
+
+.delay-01s {
+    -webkit-animation-delay: .1s;
+    animation-delay: .1s;
+}
+
+.delay-02s {
+    -webkit-animation-delay: .2s;
+    animation-delay: .2s;
+}
+
+.delay-04s {
+    -webkit-animation-delay: .4s;
+    animation-delay: .4s;
+}
+
+.delay-05s {
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
+}
+
+.delay-1s {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.delay-1-5s {
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+
+.delay-2s {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
 
 /* 头部<header>
  * =======================================================
@@ -104,7 +134,7 @@ header {
     z-index: 999;
     width: 100%;
     height: 110px;
-    opacity: .95;
+    opacity: .9;
     background-color: #f9f9f9;
 }
 
@@ -282,12 +312,12 @@ main {
 
 .link-list {
     width: 20%;
-    padding: 50px 0 30px 0;
+    padding: 70px 0 30px 0;
 }
 
 .news-list {
     width: 30%;
-    padding: 50px 0 30px 5%;
+    padding: 70px 0 30px 5%;
 }
 
 
@@ -361,12 +391,12 @@ main {
 .news-list a.more {
     font-size: .8em;
     position: absolute;
-    top: 60px;
+    top: 80px;
     right: 0;
 }
 
 .news-list a.more:hover {
-    color: #FF4599;
+    color: #ff4599;
 }
 
 .news-list li {
@@ -432,88 +462,129 @@ main {
     background-color: #e8e8e8;
 }
 
+
 /* 底部链接 */
-.special-stu{
-    background-color: #f6f6f6;
+
+.special-stu {
+    padding: 50px 0 30px 0;
     text-align: center;
-    padding: 30px 0 10px 0;
+    background-color: #eee;
 }
-.special-stu ul{
+
+.special-stu ul {
     display: inline-block;
 }
 
-.special-stu li{
+.special-stu li {
     display: inline-block;
     float: left;
     height: 78px;
 }
-.special-stu li>a{
+
+.special-stu li > a {
+    position: relative;
     display: inline-block;
     float: left;
-    position: relative;
-    background-image: url(../img/icons.png);
-    background-repeat: no-repeat;
     width: 150px;
     height: 38px;
+    transition: background-position .4s;
     color: #333;
-    transition: background-position 0.4s;
+    background-image: url(../img/icons.png);
+    background-repeat: no-repeat;
 }
-.special-stu li>a:hover{
+
+.special-stu li > a:hover {
     color: #014da1;
 }
-.special-stu li:nth-child(1)>a{
+
+.special-stu li:nth-child(1) > a {
     background-position: center -381px;
 }
-.special-stu li:nth-child(1)>a:hover{
+
+.special-stu li:nth-child(1) > a:hover {
     background-position: center -420px;
 }
-.special-stu li:nth-child(2)>a{
+
+.special-stu li:nth-child(2) > a {
     background-position: center -466px;
 }
-.special-stu li:nth-child(2)>a:hover{
+
+.special-stu li:nth-child(2) > a:hover {
     background-position: center -506px;
 }
-.special-stu li:nth-child(3)>a{
+
+.special-stu li:nth-child(3) > a {
     background-position: center -548px;
 }
-.special-stu li:nth-child(3)>a:hover{
+
+.special-stu li:nth-child(3) > a:hover {
     background-position: center -583px;
 }
-.special-stu li:nth-child(4)>a{
+
+.special-stu li:nth-child(4) > a {
     background-position: center -624px;
 }
-.special-stu li:nth-child(4)>a:hover{
+
+.special-stu li:nth-child(4) > a:hover {
     background-position: center -662px;
 }
-.special-stu li:nth-child(5)>a{
+
+.special-stu li:nth-child(5) > a {
     background-position: center -711px;
 }
-.special-stu li:nth-child(5)>a:hover{
+
+.special-stu li:nth-child(5) > a:hover {
     background-position: center -754px;
 }
-.special-stu li:nth-child(6)>a{
+
+.special-stu li:nth-child(6) > a {
     background-position: center -800px;
 }
-.special-stu li:nth-child(6)>a:hover{
+
+.special-stu li:nth-child(6) > a:hover {
     background-position: center -838px;
 }
-.special-stu li:nth-child(7)>a{
+
+.special-stu li:nth-child(7) > a {
     background-position: center -1036px;
 }
-.special-stu li:nth-child(7)>a:hover{
+
+.special-stu li:nth-child(7) > a:hover {
     background-position: center -1074px;
 }
-.special-stu li>a>span{
-    width: 100%;
+
+.special-stu li > a > span {
     position: absolute;
-    left: 0%;
     bottom: -25px;
+    left: 0;
+    width: 100%;
 }
+
+
 /* 页脚<footer> 
  * =======================================================
  */
 
 footer {
-    padding-top: 50px;
-    background-color: #e8e8e8;
+    padding: 30px 0;
+    background-color: #333;
+}
+
+footer h3 {
+    font-size: 1.2em;
+    margin: 40px 0 20px 0;
+    color: #eee;
+}
+
+footer ul > li {
+    line-height: 2em;
+    color: #c0c0c0;
+}
+
+footer ul > li > a {
+    color: #c0c0c0;
+}
+
+footer ul > li > a:hover {
+    color: #4a848b;
 }
