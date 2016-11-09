@@ -103,7 +103,7 @@ jQuery(function($) {
      */
 
     /* 方法一：wow.js */
-    $('#linkarea .col-3 li').addClass('wow fadeInUp').attr('data-wow-offset', '0');
+    $('#linkarea .col-2 li').addClass('wow fadeInUp').attr('data-wow-offset', '0');
     $('#linkarea .special-stu li').addClass('wow zoomIn').attr('data-wow-offset', '0');
     wow = new WOW({
         boxClass: 'wow', // default
@@ -135,7 +135,7 @@ jQuery(function($) {
         });
     }
     // 初始化
-    var linkareaList = $('#linkarea .col-3 li');
+    var linkareaList = $('#linkarea .col-2 li');
     var specialStuList = $('#linkarea .special-stu li');
     animateWhenOnScreen(linkareaList,'fadeInUp delay-02s');
     animateWhenOnScreen(specialStuList,'zoomIn delay-02s');
