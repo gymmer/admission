@@ -67,6 +67,17 @@ i.fa {
 }
 
 
+/* 2列浮动布局 */
+
+.col-2 {
+    position: relative;
+    float: left;
+    width: 45%;
+    min-width: 350px;
+    padding: 0 2.5% 0 2.5%;
+}
+
+
 /* 3列浮动布局 */
 
 .col-3 {
@@ -259,8 +270,12 @@ main {
     height: 12px;
     margin-right: 10px;
     cursor: pointer;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
     border-radius: 6px;
     background-color: #fff;
+    -o-border-radius: 6px;
+    -ms-border-radius: 6px;
 }
 
 #slider ol.dots > li.active {
@@ -280,6 +295,10 @@ main {
     width: 45px;
     height: 60px;
     cursor: pointer;
+    -webkit-transition: background-color .4s;
+    -moz-transition: background-color .4s;
+    -ms-transition: background-color .4s;
+    -o-transition: background-color .4s;
     transition: background-color .4s;
     text-align: center;
     color: #fff;
@@ -311,13 +330,13 @@ main {
 /* 布局 */
 
 .link-list {
-    width: 20%;
-    padding: 70px 0 30px 0;
+    width: 35%;
+    padding: 50px 0 30px 10%;
 }
 
 .news-list {
-    width: 30%;
-    padding: 70px 0 30px 5%;
+    width: 45%;
+    padding: 60px 0 30px 0;
 }
 
 
@@ -330,15 +349,24 @@ main {
 }
 
 .link-list li > a {
+    display: block;
+    width: 260px;
+    height: 55px;
+    padding-left: 30px;
     font-size: 1.3em;
-    line-height: 2em;
-    display: inline-block;
-    padding: 10px 25px;
-    transition: opacity .4s;
-    text-align: center;
+    line-height: 55px;
     letter-spacing: .1em;
     color: #fff;
+    -webkit-box-shadow: 5px 5px 4px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 5px 5px 4px rgba(0, 0, 0, .2);
+    -ms-box-shadow: 5px 5px 4px rgba(0, 0, 0, .2);
+    -o-box-shadow: 5px 5px 4px rgba(0, 0, 0, .2);
     box-shadow: 5px 5px 4px rgba(0, 0, 0, .2);
+    -webkit-transition: opacity .4s;
+    -moz-transition: opacity .4s;
+    -ms-transition: opacity .4s;
+    -o-transition: opacity .4s;
+    transition: opacity .4s;
 }
 
 .link-list li > a:hover {
@@ -346,21 +374,46 @@ main {
 }
 
 .link-list li:nth-child(1) > a {
-    transform: rotate(-3deg);
+    -webkit-transform: rotate(-1.5deg);
+    -moz-transform: rotate(-1.5deg);
+    -ms-transform: rotate(-1.5deg);
+    -o-transform: rotate(-1.5deg);
+    transform: rotate(-1.5deg);
     background-color: #c35b45;
 }
 
 .link-list li:nth-child(2) > a {
-    transform: rotate(3deg);
-    background-color: #6bc345;
+    -webkit-transform: rotate(1.5deg);
+    -moz-transform: rotate(1.5deg);
+    -ms-transform: rotate(1.5deg);
+    -o-transform: rotate(1.5deg);
+    transform: rotate(1.5deg);
+    background-color: #de8419;
 }
 
 .link-list li:nth-child(3) > a {
-    transform: rotate(-3deg);
-    background-color: #4a848b;
+    -webkit-transform: rotate(-1.5deg);
+    -moz-transform: rotate(-1.5deg);
+    -ms-transform: rotate(-1.5deg);
+    -o-transform: rotate(-1.5deg);
+    transform: rotate(-1.5deg);
+    background-color: #6bc345;
 }
 
 .link-list li:nth-child(4) > a {
+    -webkit-transform: rotate(1.5deg);
+    -moz-transform: rotate(1.5deg);
+    -ms-transform: rotate(1.5deg);
+    -o-transform: rotate(1.5deg);
+    transform: rotate(1.5deg);
+    background-color: #4a848b;
+}
+
+.link-list li:nth-child(5) > a {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
     transform: rotate(0deg);
     background-color: #5d45c3;
 }
@@ -391,7 +444,7 @@ main {
 .news-list a.more {
     font-size: .8em;
     position: absolute;
-    top: 80px;
+    top: 70px;
     right: 0;
 }
 
@@ -487,6 +540,10 @@ main {
     float: left;
     width: 150px;
     height: 38px;
+    -webkit-transition: background-position .4s;
+    -moz-transition: background-position .4s;
+    -ms-transition: background-position .4s;
+    -o-transition: background-position .4s;
     transition: background-position .4s;
     color: #333;
     background-image: url(../img/icons.png);
@@ -566,7 +623,7 @@ main {
  */
 
 footer {
-    padding: 30px 0;
+    padding: 10px 0 30px 0;
     background-color: #333;
 }
 
