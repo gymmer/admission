@@ -331,7 +331,7 @@ main {
 
 .link-list {
     width: 35%;
-    padding: 50px 0 30px 10%;
+    padding: 60px 7% 30px 7%;
 }
 
 .news-list {
@@ -345,16 +345,16 @@ main {
 .link-list li {
     position: relative;
     display: inline-block;
-    margin: 15px;
+    margin: 18px;
 }
 
 .link-list li > a {
     display: block;
-    width: 260px;
-    height: 55px;
-    padding-left: 30px;
+    width: 280px;
+    height: 65px;
+    padding-left: 35px;
     font-size: 1.3em;
-    line-height: 55px;
+    line-height: 65px;
     letter-spacing: .1em;
     color: #fff;
     -webkit-box-shadow: 5px 5px 4px rgba(0, 0, 0, .2);
@@ -374,42 +374,33 @@ main {
 }
 
 .link-list li:nth-child(1) > a {
-    -webkit-transform: rotate(-1.5deg);
-    -moz-transform: rotate(-1.5deg);
-    -ms-transform: rotate(-1.5deg);
-    -o-transform: rotate(-1.5deg);
-    transform: rotate(-1.5deg);
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    transform: rotate(-3deg);
     background-color: #c35b45;
 }
 
 .link-list li:nth-child(2) > a {
-    -webkit-transform: rotate(1.5deg);
-    -moz-transform: rotate(1.5deg);
-    -ms-transform: rotate(1.5deg);
-    -o-transform: rotate(1.5deg);
-    transform: rotate(1.5deg);
-    background-color: #de8419;
-}
-
-.link-list li:nth-child(3) > a {
-    -webkit-transform: rotate(-1.5deg);
-    -moz-transform: rotate(-1.5deg);
-    -ms-transform: rotate(-1.5deg);
-    -o-transform: rotate(-1.5deg);
-    transform: rotate(-1.5deg);
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    transform: rotate(3deg);
     background-color: #6bc345;
 }
 
-.link-list li:nth-child(4) > a {
-    -webkit-transform: rotate(1.5deg);
-    -moz-transform: rotate(1.5deg);
-    -ms-transform: rotate(1.5deg);
-    -o-transform: rotate(1.5deg);
-    transform: rotate(1.5deg);
+.link-list li:nth-child(3) > a {
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    transform: rotate(-3deg);
     background-color: #4a848b;
 }
 
-.link-list li:nth-child(5) > a {
+.link-list li:nth-child(4) > a {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
