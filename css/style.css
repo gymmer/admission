@@ -4,17 +4,14 @@
 
 body {
     font: 16px 'Microsoft Yahei', '微软雅黑', Helvetica, Arial, sans-serif;
-    color: #000;
-    background-color: #fff;
+    min-width: 630px;
 }
 
 
 /* 链接 */
 
 a {
-    text-decoration: none;
     color: #4585c3;
-    outline: none;
 }
 
 a:hover {
@@ -39,62 +36,6 @@ input::-ms-reveal {
 
 i.fa {
     margin-right: 1em;
-}
-
-
-/* 清除浮动 */
-
-.clearfix:after {
-    font-size: 0;
-    display: block;
-    visibility: hidden;
-    clear: both;
-    height: 0;
-    content: ' ';
-}
-
-.clearfix {
-    zoom: 1;
-}
-
-
-/* 定宽、居中的容器 */
-
-.container {
-    width: 90%;
-    height: 100%;
-    margin: 0 auto;
-}
-
-
-/* 2列浮动布局 */
-
-.col-2 {
-    position: relative;
-    float: left;
-    width: 45%;
-    min-width: 350px;
-    padding: 0 2.5% 0 2.5%;
-}
-
-
-/* 3列浮动布局 */
-
-.col-3 {
-    position: relative;
-    float: left;
-    width: 30%;
-    min-width: 350px;
-    padding: 0 1.65% 0 1.65%;
-}
-
-
-/* 响应式 */
-
-.responsive-img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
 }
 
 
@@ -136,6 +77,20 @@ i.fa {
 }
 
 
+/* 重置ul、ol的样式*/
+
+ul.reset,
+ol.reset {
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    vertical-align: baseline;
+    border: 0;
+}
+
+
 /* 头部<header>
  * =======================================================
  */
@@ -149,12 +104,15 @@ header {
     background-color: #f9f9f9;
 }
 
+main {
+    padding-top: 110px;
+}
+
 
 /* 导航栏<nav> */
 
 nav#primary-nav {
     position: relative;
-    width: 100%;
     height: 100%;
     background: url(../img/bnulog.jpg) no-repeat left bottom;
 }
@@ -203,13 +161,31 @@ nav#primary-nav .dynamic-bottom {
 }
 
 
+/* 媒体查询，使导航栏具有响应式 */
+
+@media screen and (max-width: 992px) {
+    header {
+        position: static;
+        height: 140px;
+    }
+    main {
+        padding-top: 0;
+    }
+    nav#primary-nav {
+        background: url(../img/bnulog.jpg) no-repeat center top;
+    }
+    nav#primary-nav ul {
+        top: 80px;
+        left: 50%;
+        width: 630px;
+        margin-left: -315px;
+    }
+}
+
+
 /* 首页
  * =======================================================
  */
-
-main {
-    padding-top: 110px;
-}
 
 
 /*
@@ -237,17 +213,14 @@ main {
 
 /* 滑动图片：文字标题 */
 
-#slider > h2 > span {
+#slider p.slider-title > span {
     font-size: 1.6em;
     position: absolute;
     z-index: 2;
     bottom: 10%;
     left: 10%;
-    display: block;
     width: 25%;
     min-width: 200px;
-    height: 20%;
-    min-height: 80px;
     padding: 20px 30px;
     letter-spacing: .1em;
     color: #fff;
@@ -270,12 +243,12 @@ main {
     height: 12px;
     margin-right: 10px;
     cursor: pointer;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
     background-color: #fff;
-    -o-border-radius: 6px;
-    -ms-border-radius: 6px;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
 }
 
 #slider ol.dots > li.active {
@@ -329,18 +302,19 @@ main {
 
 /* 布局 */
 
-.link-list {
-    width: 35%;
-    padding: 60px 7% 30px 7%;
-}
-
+.link-list,
 .news-list {
-    width: 45%;
-    padding: 60px 0 30px 0;
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 30px;
 }
 
 
 /* 左侧链接 */
+
+.link-list ul {
+    padding-left: 100px;
+}
 
 .link-list li {
     position: relative;
@@ -349,24 +323,24 @@ main {
 }
 
 .link-list li > a {
+    font-size: 1.3em;
+    line-height: 65px;
     display: block;
     width: 280px;
     height: 65px;
     padding-left: 35px;
-    font-size: 1.3em;
-    line-height: 65px;
-    letter-spacing: .1em;
-    color: #fff;
-    -webkit-box-shadow: 5px 5px 4px rgba(0, 0, 0, .2);
-    -moz-box-shadow: 5px 5px 4px rgba(0, 0, 0, .2);
-    -ms-box-shadow: 5px 5px 4px rgba(0, 0, 0, .2);
-    -o-box-shadow: 5px 5px 4px rgba(0, 0, 0, .2);
-    box-shadow: 5px 5px 4px rgba(0, 0, 0, .2);
     -webkit-transition: opacity .4s;
     -moz-transition: opacity .4s;
     -ms-transition: opacity .4s;
     -o-transition: opacity .4s;
     transition: opacity .4s;
+    letter-spacing: .1em;
+    color: #fff;
+    -webkit-box-shadow: 5px 5px 4px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 5px 5px 4px rgba(0, 0, 0, .2);
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, .2);
+    -ms-box-shadow: 5px 5px 4px rgba(0, 0, 0, .2);
+    -o-box-shadow: 5px 5px 4px rgba(0, 0, 0, .2);
 }
 
 .link-list li > a:hover {
@@ -435,8 +409,8 @@ main {
 .news-list a.more {
     font-size: .8em;
     position: absolute;
-    top: 70px;
-    right: 0;
+    top: 90px;
+    right: 15px;
 }
 
 .news-list a.more:hover {

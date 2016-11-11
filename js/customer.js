@@ -1,6 +1,9 @@
 jQuery.noConflict();
 jQuery(function($) {
 
+    /* 图片添加响应式*/
+    $('img').addClass('img-responsive');
+
     /*
      * 外部链接添加属性：target="_blank"
      */
@@ -48,7 +51,7 @@ jQuery(function($) {
     // 变量
     var slider = $('#slider');
     var sliderImages = slider.find('img');
-    var sliderTitle = slider.find('h2');
+    var sliderTitle = slider.find('.slider-title');
     // 初始化文字标题.
     sliderTitle.html('<span class="animated fadeInLeft">' + sliderImages[0].getAttribute('alt') + '</span>');
     // 插件：unslider
@@ -68,7 +71,7 @@ jQuery(function($) {
         fluid: true //  Support responsive design. May break non-responsive designs
     });
     // 隐藏dots的数字
-    slider.find('ol>li').text('');
+    slider.find('ol').addClass('reset').find('li').text('');
     // 追加arrows到滑动图片区域
     var sliderArrows = slider.append($('p.arrows')).find('.arrows');
     // arrows显示图标
