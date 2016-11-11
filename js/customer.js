@@ -45,6 +45,13 @@ jQuery(function($) {
         goToIndex(currentNavIndex);
     }).mouseout();
 
+    /**
+     * 下拉菜单
+     */
+    $('#dropdown-menu button').click(function() {
+        primaryNav.stop().toggle('fast');
+    });
+    
     /*
      * 首页滑动图片
      */
@@ -106,7 +113,7 @@ jQuery(function($) {
      */
 
     /* 方法一：wow.js */
-    $('#linkarea .col-2 li').addClass('wow fadeInUp').attr('data-wow-offset', '0');
+    $('#linkarea .col-md-6 li').addClass('wow fadeInUp').attr('data-wow-offset', '0');
     $('#linkarea .special-stu li').addClass('wow zoomIn').attr('data-wow-offset', '0');
     wow = new WOW({
         boxClass: 'wow', // default
