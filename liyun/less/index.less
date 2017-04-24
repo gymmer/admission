@@ -1,0 +1,166 @@
+@import "_global";
+@import "_global";
+@import "_header";
+@import "_footer";
+// ====================================
+// 滑动图片
+// ====================================
+#slider {
+    margin-top: 10px;
+    .box-shadow(0, 0, 5px, rgba(0, 0, 0, 0.8));
+    // 标题文字
+    .carousel-caption {
+        font-size: 1.4em;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 15px;
+        margin-bottom: 30px;
+    }
+    // 上下页箭头
+    .carousel-control {
+        font-size: 2em;
+    }
+    .left i {
+        .absolute(lt, 15px, 50%);
+    }
+    .right i {
+        .absolute(rt, 15px, 50%);
+    }
+}
+
+// ====================================
+// 主要内容区域
+// ====================================
+// 每个区域
+#main {
+    padding-bottom: 30px;
+}
+
+.main-box {
+    @link-color: #333;
+    margin-top: 40px;
+    // 头部标题
+    .box-header {
+        .relative();
+        margin-bottom: 15px;
+    }
+    h3 {
+        .reset();
+        .font-family(hei);
+        color: @link-color;
+        font-weight: bold;
+        font-size: 1.5em;
+        border-bottom: 1px solid #ccc;
+        padding: 10px 0;
+        letter-spacing: 0.2em;
+        & i {
+            .transition(transform, slow);
+            margin: 0 0.5em 0 0.5em;
+        }
+    }
+    &:hover h3 i {
+        .transform(rotate(360deg)); // 标题的图标旋转
+    }
+    .more {
+        .absolute(rb, 0, 5px);
+        color: @base-color;
+        &:hover {
+            color: #ff4599;
+            text-decoration: none;
+        }
+    }
+    ul {
+        .reset(ul);
+        li {
+            margin-bottom: 15px;
+            line-height: 1.8em;
+            .relative();
+        }
+        a {
+            color: @link-color;
+            font-size: 1.0em;
+            &:hover {
+                color: @base-color;
+                text-decoration: none;
+            }
+        }
+        time {
+            color: #888;
+            font-size: 0.8em;
+            margin-right: 10px;
+        }
+    }
+}
+
+// 最新进展
+#latest-development {
+    li {
+        @img-w: 35%;
+        // 文字
+        a {
+            .absolute(lt, @img-w, 0);
+            padding-left: 10px;
+            width: 1-@img-w;
+        }
+        p {
+            .reset();
+        }
+        hr {
+            .reset();
+        }
+        // 图片
+        img {
+            display: inline-block;
+            width: @img-w;
+            height: auto;
+        }
+    }
+}
+
+// 学术活动
+#scholar-activity {
+    li {
+        @h: 48px;
+        @time-w: 60px;
+        @time-color: #29496b;
+        height: @h;
+        // 文字
+        a {
+            .absolute(lt, @time-w, 0);
+            padding-left: 10px;
+            width: 80%;
+        }
+        // 时间
+        time {
+            .absolute(lt, 0, 0);
+            display: inline-block;
+            width: @time-w;
+            height: @h;
+            font-size: 1em;
+            line-height: @h/2;
+        }
+        .commom-style() {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+        .year-month {
+            .absolute(lt, 0, 0);
+            .commom-style();
+            background-color: @time-color;
+            color: #fff;
+        }
+        .day {
+            .absolute(lb, 0, 0);
+            .commom-style();
+            background-color: #e8e8e8;
+            color: @time-color;
+        }
+    }
+}
+
+// 重要通知
+#important-notation {
+    li {
+        .no-anotherline(100%);
+    }
+}

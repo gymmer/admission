@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="none">
+    <meta name="description" content="none">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>BB登陆提示</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--[if !IE]> -->
+        <script src="js/jquery-2.2.4.min.js"></script>
+    <!-- <![endif]-->
+    <!--[if IE]>
+        <script src="js/jquery-1.12.4.min.js"></script>
+    <![endif]-->
+    <script src="js/customer.js"></script>
+
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <div id="top">
+            <div class="overlay">
+                <div class="animated fadeInDown title">BB登陆提示</div>
+                <div class="animated fadeInUp delay-05s sub-title">您的身份是？</div>
+                <div class="animated fadeInUp delay-1s" id="choose-button">
+                    <div class="button" id="inner-button">校内用户</div>
+                    <div class="button" id="outer-button">校外用户</div>
+                </div>
+            </div>
+        </div>
+        <!-- top end -->
+        <div id="bottom">
+            <div class="tab animated flipInX">
+                <div class="align-center sub-title">
+                    <span class="font-red">校内用户</span>
+                </div>
+                <div class="bottom-left">
+                    <p>由于学校提升信息安全的需要，我校正式注册的师生，需要从学校<span class="font-red">信息门户</span>进入BB平台。</p>
+                    <p>进入“<span class="font-red">数字京师</span>”后，请在左侧的“<span class="font-red">常用校务管理系统中</span>”，翻页找到<span class="font-red">BB平台</span>，直接点击进入。</p>
+                </div>
+                <div class="bottom-right">
+                    <a href="http://one.bnu.edu.cn" target="_balnk" id="inner-link">
+                        <img src="img/szjs.jpg" alt="数字京师">
+                        <div class="cover"></div>
+                    </a>
+                </div>
+                <div class="contact">
+                    <span style="margin-right: 60px;">BB管理员电话：58803691</span>
+                    <span>邮箱：BB@bnu.edu.cn</span>
+                </div>
+            </div>
+            <!-- tab end -->
+            <div class="tab animated flipInX">
+                <div class="align-center sub-title">
+                    <span class="font-red">校外用户</span>
+                </div>
+                <div class="bottom-left">
+                    <p>不具有我校工作证号和学号的人员，如果已经由BB平台管理员给予了<span class="font-red">临时ID</span>，请使用右侧的<span class="font-red">临时登陆通道</span>。</p>
+                </div>
+                <div class="bottom-right">
+                    <a href="http://219.143.237.180/" target="_balnk" id="outer-link">
+                        <img src="img/lstd.gif" alt="临时登陆通道">
+                        <div class="cover"></div>
+                    </a>
+                </div>
+                <div class="contact">
+                    <span style="margin-right: 80px;">BB管理员电话：58803691</span>
+                    <span>邮箱：BB@bnu.edu.cn</span>
+                </div>
+            </div>
+            <!-- tab end -->
+        </div>
+        <!-- bottom end -->
+    </div>
+    <!-- container end -->
+</body>
+
+</html>

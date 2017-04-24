@@ -1,0 +1,30 @@
+@import "_global";
+// ====================================
+// 页脚
+// ====================================
+footer {
+    background-color: #112769;
+    margin-top: 30px;
+    padding: 15px 0;
+    p {
+        .reset();
+        color: #bbb;
+        text-align: center;
+    }
+}
+
+// ====================================
+// 返回顶部
+// ====================================
+#go-to-top {
+    @go-to-top-wh: 40px;
+    .fixed(rb, 25px, 60px);
+    display: none;
+    width: @go-to-top-wh;
+    height: @go-to-top-wh;
+    cursor: pointer;
+    background-image: url(../img/up.png);
+    &:hover {
+        background-image: url(../img/up_hover.png);
+    }
+}

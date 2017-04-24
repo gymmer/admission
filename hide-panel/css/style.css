@@ -1,0 +1,173 @@
+/* 页面上的菜单 */
+
+body {
+    position: relative;
+}
+
+.menu {
+    font: 15px sans-serif;
+    position: absolute;
+    top: 250px;
+    left: 250px;
+    width: 240px;
+    height: 70px;
+    cursor: pointer;
+    text-align: center;
+    color: #fdfcff;
+}
+
+.menu > li {
+    line-height: 35px;
+    position: absolute;
+    display: inline-block;
+    width: 120px;
+    height: 35px;
+    transition: background-color .2s;
+    border: 1px solid #29a7d0;
+    background-color: #76d3f2;
+}
+
+.menu > li:hover {
+    background-color: #29a7d0;
+}
+
+.menu > li:nth-child(1) {
+    top: 0;
+    left: 0;
+    border-top: 0;
+    border-left: 0;
+}
+
+.menu > li:nth-child(2) {
+    top: 0;
+    right: 0;
+    border-top: 0;
+    border-right: 0;
+}
+
+.menu > li:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    border-bottom: 0;
+    border-left: 0;
+}
+
+.menu > li:nth-child(4) {
+    right: 0;
+    bottom: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.menu > li > a {
+    text-decoration: none;
+    color: #fdfcff;
+}
+
+.menu > li .fa {
+    margin-right: 10px;
+}
+
+
+/* 悬浮的面板 */
+
+.hide-panel {
+    font: 13px Helvetica, Arial, sans-serif;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 35px;
+    display: none;
+    width: 400px;
+    height: 200px;
+    border: 3px solid #555;
+    background-color: #fff;
+}
+
+.single-tab {
+    width: 300px;
+}
+
+.menu > li:nth-child(1) .hide-panel {
+    right: -100px;
+}
+
+.menu > li:hover .hide-panel {
+    display: block;
+}
+
+
+/* 面板中每一个列表tab */
+
+.hide-tab-titles {
+    line-height: 30px;
+    width: 100%;
+    height: 30px;
+    text-align: left;
+    background-color: #29a6d0;
+}
+
+.hide-tab-titles > li {
+    display: inline-block;
+    padding: 0 16px;
+}
+
+.hide-tab-titles > li.foucus {
+    color: #000;
+    background-color: #fff;
+}
+
+.hide-tab-lists {
+    position: relative;
+    width: 100%;
+    height: 170px;
+}
+
+.single-tab .hide-tab-lists {
+    height: 100%;
+}
+
+.hide-tab-lists ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+}
+
+.hide-tab-lists li {
+    line-height: 25px;
+    margin-left: 10px;
+    border-bottom: 1px dotted #bbb;
+}
+
+.hide-tab-lists li:hover {
+    background-color: #fafafa;
+}
+
+.hide-tab-lists li:first-child {
+    margin-top: 10px;
+}
+
+.hide-tab-lists li:last-child {
+    margin-bottom: 10px;
+}
+
+.hide-tab-lists a,
+.hide-tab-lists a:hover {
+    display: block;
+    text-decoration: none;
+    color: #555;
+}
+
+.hide-tab-lists a:before {
+    font-family: FontAwesome;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0 10px;
+    content: '\f105';
+    color: #888;
+}

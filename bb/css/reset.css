@@ -1,0 +1,15 @@
+body,button, input, select, textarea { font: 16px Helvetica, Arial, sans-serif;}
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,dl, dt, dd, ul,li, pre, fieldset, lengend, button, input, textarea,th,td,code,form{ margin: 0;padding: 0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;vertical-align:top;}
+button, input, select, textarea {font-size: 100%;}
+ul,li{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+hr {border: none;height: 1px;}
+select{height:22px; line-height:18px; padding:2px 0}
+a{ text-decoration:none;outline:none; color:#4585c3 }
+a:hover{ text-decoration:none;}
+i,em{ font-style:normal;}
+input::-ms-clear,input::-ms-reveal{ display:none;}
+.clearfix:after { visibility:hidden; display:block; font-size:0; content:" "; clear:both; height:0;}
+.clearfix { zoom:1;}

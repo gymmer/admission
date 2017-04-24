@@ -1,0 +1,30 @@
+@import "_global";
+// ====================================
+// 页脚
+// ====================================
+footer {
+    background: url(../img/foot-bg.jpg) no-repeat center right;
+    background-size: cover;
+    color: #eee;
+    padding: 30px 0 15px 0;
+    img {
+        width: 90px;
+        height: auto;
+    }
+}
+
+// ====================================
+// 返回顶部
+// ====================================
+#go-to-top {
+    @go-to-top-wh: 40px;
+    .fixed(rb, 25px, 60px);
+    display: none;
+    width: @go-to-top-wh;
+    height: @go-to-top-wh;
+    cursor: pointer;
+    background-image: url(../img/up.png);
+    &:hover {
+        background-image: url(../img/up_hover.png);
+    }
+}

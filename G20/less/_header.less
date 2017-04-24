@@ -1,0 +1,46 @@
+@import "_global";
+// ====================================
+// 顶部logo区域
+// ====================================
+#primary-header {
+}
+
+// ====================================
+// 导航栏/菜单
+// ====================================
+
+#primary-nav {
+    .font-family();
+    background-color: #004EA2;
+    
+    // 一级菜单
+    .parent {
+        .reset(ul);
+        .clearfix();
+        display: inline;
+
+        & > li {
+            .fl();
+            .relative();
+        }
+        & > li > a {
+            .transition(background-color, fast);
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            width: (@screen-width - 10)/10;
+            height: 40px;
+            font-size: 1.0em;
+            line-height: 1.0em;
+            color: #fff;
+            border-right: 1px solid #e4e4e4;
+        }
+        & > li:hover > a {
+            background-color: #112769;
+            text-decoration: none;
+        }
+        & > li:last-child > a {
+            border-right: 0;
+        }
+    }
+}
