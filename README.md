@@ -1,19 +1,20 @@
-## DEMOS：Some static pages when I worked as a trainee in Center Of Information & Network Technology of Beijing Normal University
+## DEMOS Of BNU
 
 ---
 
 **我在北京师范大学信息网络中心实习中，搭建的网站DEMO**    
+Some static pages when I worked as a trainee in Center Of Information & Network Technology of Beijing Normal University
 
 ---
 
 ### ***目录***  
-- 本科生招生网  
-- 文化研究院
-- 励耘学院  
-- G20中心
-- 师宏公司
-- BB登陆页
-- 悬浮面板示例  
+- 本科生招生网(admission)  
+- 文化研究院(cultureCenter)
+- 励耘学院(liyun)  
+- G20中心(G20)
+- 师宏公司(shihong)
+- BB登陆页(bb)
+- 悬浮面板示例(hide-panel)  
 
 ---
 
