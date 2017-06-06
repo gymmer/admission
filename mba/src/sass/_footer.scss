@@ -1,2 +1,33 @@
 @import 'utils', 'variables', 'compass';
 
+#primary-footer {
+	$bgc: darken($style-color, 5%);
+	$text-color: #eee;
+	$line-color: darken($bgc, 5%);
+
+	background-color: $bgc;
+	// background: url(../img/foot.jpg) no-repeat center right;
+    // background-size: cover;
+    padding: 20px 0 10px 0;
+
+    // 二维码
+    .qrcode {
+    	text-align: center;
+    	margin-bottom: 10px;
+
+    	img {
+       		width: 90px;
+	        height: auto;
+	    }
+    }
+
+    // 版权文字
+    .copyright {
+    	color: $text-color;
+    	border-left: 1px solid $line-color;
+
+    	p {
+    		margin: 3px 0;
+    	}
+    }
+}

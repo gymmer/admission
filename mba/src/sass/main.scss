@@ -58,6 +58,7 @@ body {
     $bgc: #efefef;
     $box-bgc: #fff;
     $box-border: #e5e5e5;
+    $line-color: #e5e5e5;
 
     background-color: $bgc;
     padding: 10px;
@@ -67,6 +68,35 @@ body {
         border: 1px solid $box-border;
         background-color: $box-bgc;
         margin-top: 20px;
+
+        // 盒子头部
+        &-header {
+            position: relative;
+            border-bottom: 1px solid $line-color;
+
+            // 标题
+            h5 {
+                padding-left: 10px;
+                margin-left: 10px;
+                border-left: 4px solid $style-color;
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            // 更多
+            .more {
+                position: absolute;
+                right: 10px;
+                top: 0;
+                font-size: 13px;
+                color: $style-color;
+
+                &:hover {
+                    color: darken($style-color, 10%);
+                    text-decoration: none;
+                }
+            }
+        }
     }
 }
 

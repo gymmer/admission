@@ -177,7 +177,8 @@ gulp.task('img', function() {
 		.pipe($.if(isPro, $.cache($.imagemin({								// 图片压缩
 			interlaced: true
 		}))))
-		.pipe(gulp.dest(OUT_IMG_DIR));					 					// 保存图片文件
+		.pipe(gulp.dest(OUT_IMG_DIR))					 					// 保存图片文件
+		.pipe($.connect.reload());											// 浏览器热更新
 
 });
 
@@ -222,6 +223,7 @@ gulp.task('watch', function() {
 	gulp.watch(SRC_CSS_FILES,  ['css']);
 	gulp.watch(SRC_SASS_FILES, ['sass']);
 	gulp.watch(SRC_HTML_FILES, ['html']);
+	gulp.watch(SRC_IMG_FILES,  ['img']);
 
 });
 
