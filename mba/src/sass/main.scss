@@ -53,6 +53,48 @@ body {
     }
 }
 
+/* 首页每个区域的标题 */
+.index-sub-titile {
+    $line-width: 50%;
+    $text-width: 140px;
+    $text-height: 20px;
+
+    // 分割线
+    position: relative;
+    border-top: 1px solid #ccc;
+    height: 1px;
+    width: $line-width;
+    margin: 20px auto;
+
+    // 文字
+    &-text {
+        // 文字样式
+        color: $style-color;
+        font-weight: bold;
+        font-family: $font-family-wryh;
+        text-align: center;
+        // 文字位置
+        position: absolute;
+        width: $text-width;
+        height: $text-height;
+        top: - $text-height/2;
+        left: 50%;
+        margin-left: - $text-width/2;
+        z-index: 2;
+    }
+}
+
+/* 首页banner区域 */
+#index-banner {
+    $bgc: #fff;
+
+    .index-sub-titile-text {
+        background-color: $bgc;
+    }
+
+    padding-bottom: 20px;
+}
+
 /* 首页内容区域 */
 #index-content {
     $bgc: #efefef;
@@ -61,13 +103,21 @@ body {
     $line-color: #e5e5e5;
 
     background-color: $bgc;
-    padding: 10px;
+
+    .index-sub-titile-text {
+        background-color: $bgc;
+    }
 
     .content-box {
         height: 100px;
         border: 1px solid $box-border;
         background-color: $box-bgc;
-        margin-top: 20px;
+        margin-bottom: 20px;
+        @include transition(box-shadow 0.2s);
+
+        &:hover {
+            @include box-shadow(5px 5px 5px rgba(0,0,0,0.1));
+        }
 
         // 盒子头部
         &-header {
@@ -102,6 +152,11 @@ body {
 
 /* 首页相关链接 */
 #index-related {
-    background-color: #cbcbcb;
+    $bgc: #EFF8FF;
+    background-color: $bgc;
+
+    .index-sub-titile-text {
+        background-color: $bgc;
+    }
 }
 

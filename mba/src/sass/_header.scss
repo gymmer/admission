@@ -19,12 +19,16 @@
   .color-bar {
     position: absolute;
     left: 0;
-    width: 50%;
     height: $height;
+    width: 50%;
     background-color: $color-bar-bgc;
   }
 
   // 链接的布局
+  .util-list {
+    @include clearfix();
+  }
+
   ul, li {
     margin: 0;
     padding: 0;
@@ -32,9 +36,10 @@
   }
 
   ul {
+    float: right;
+    position: relative;
+    z-index: 2;
     background-color: $bgc;
-    position: absolute;
-    right: 0;
   }
 
   li {
@@ -64,7 +69,8 @@
 /* logo */
 #primary-logo {
   background-color: #EFF8FF;
-  padding: 10px;
+  padding: 5px 0;
+  overflow: hidden;
 }
 
 /* 导航栏 */
