@@ -1,0 +1,125 @@
+@import 'utils', 'variables', 'compass';
+
+/* 工具区 */
+#primary-util {
+  $height: 22px;
+  $bgc: #000;
+  $color-bar-bgc: darken($style-color, 5%);
+  $line-color: #999;
+  $text-color: #999;
+  $text-hover-color: lighten($text-color, 10%);
+
+  background-color: $bgc;
+  font-family: $font-family-ht;
+  height: $height;
+  font-size: 14px;
+  position: relative;
+
+  // 颜色条
+  .color-bar {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: $height;
+    background-color: $color-bar-bgc;
+  }
+
+  // 链接的布局
+  ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  ul {
+    background-color: $bgc;
+    position: absolute;
+    right: 0;
+  }
+
+  li {
+    display: inline-block;
+    float: left;
+    width: 90px;
+    height: $height;
+    line-height: $height;
+    text-align: center;
+    border-right: 1px solid $line-color;
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  // 文字颜色
+  a {
+    color: $text-color;
+
+    &:hover {
+      color: $text-hover-color;
+    }
+  }
+}
+
+/* logo */
+#primary-logo {
+  background-color: #EFF8FF;
+  padding: 10px;
+}
+
+/* 导航栏 */
+#primary-nav {
+  $nav-bgc: $style-color;
+  $nav-hover-bgc: darken($style-color, 10%);
+  $nav-line-bgc: darken($style-color, 5%);
+  $nav-font-size: 15px;
+
+  background-color: $nav-bgc;
+  border: 0;
+  @include border-radius(0);
+  margin-bottom: 0;
+
+  // 文字
+  a {
+    color: #fff;
+    font-size: $nav-font-size;
+  }
+
+  // 一级菜单悬停时的背景色
+  .navbar-nav>.open>a {
+    background-color: $nav-hover-bgc;
+  }
+
+  // 二级菜单
+  .dropdown-menu {
+    background-color: $nav-bgc;
+
+    a {
+      font-size: $nav-font-size - 1;
+      line-height: 2*$nav-font-size;
+
+      &:hover {
+        background-color: $nav-hover-bgc;
+      }
+    }
+  }
+
+  // 菜单折叠时的边框
+  .navbar-collapse {
+    border-color: $nav-line-bgc;
+  }
+
+  // 折叠按钮
+  .navbar-toggle {
+    border-color: $nav-line-bgc;
+
+    &:focus,
+    &:hover {
+      background-color: $nav-hover-bgc;
+    }
+
+    .icon-bar {
+      background-color: #fff;
+    }
+  }
+}

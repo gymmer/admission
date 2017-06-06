@@ -1,0 +1,77 @@
+@import 'utils', 'variables', 'compass';
+
+/* 通用的样式 */
+body {
+  	@include box-sizing(border-box);
+}
+
+/* 通用的头部 */
+@import 'header';
+
+/* 通用的页脚 */
+@import 'footer';
+
+/* 首页轮播图 */
+#index-slider {
+	border-top: 6px solid #cbcbcb;
+    border-right: 3px solid #cbcbcb;
+    border-left: 3px solid #cbcbcb;
+
+	// 导航点
+	.carousel-indicators .active {
+		background-color: $style-color;
+	}
+
+	// 图片标题
+    .carousel-caption {
+    	background-color: rgba(255, 0, 0, 0.2);
+    	padding: 10px;
+    	margin: 0;
+    	margin-bottom: 35px;
+    	font-size: 16px;
+    	font-weight: normal;
+    }
+
+	// 上下页箭头
+    .carousel-control {
+        font-size: 2em;
+    }
+    .left i {
+    	position: absolute;
+    	left: 15px;
+    	top: 50%;
+    }
+    .right i {
+        position: absolute;
+    	right: 15px;
+    	top: 50%;
+    }
+
+	// 宽屏
+    img {
+    	width: 100%;
+    }
+}
+
+/* 首页内容区域 */
+#index-content {
+    $bgc: #efefef;
+    $box-bgc: #fff;
+    $box-border: #e5e5e5;
+
+    background-color: $bgc;
+    padding: 10px;
+
+    .content-box {
+        height: 100px;
+        border: 1px solid $box-border;
+        background-color: $box-bgc;
+        margin-top: 20px;
+    }
+}
+
+/* 首页相关链接 */
+#index-related {
+    background-color: #cbcbcb;
+}
+
