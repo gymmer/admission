@@ -9,8 +9,9 @@ Some static pages when I worked as a trainee in Center Of Information & Network 
 
 ### ***目录***  
 - 本科生招生网(admission)  
-- 文化研究院(cultureCenter)
 - 励耘学院(liyun)  
+- 经管学院MBA(mba)
+- 文化研究院(cultureCenter)
 - G20中心(G20)
 - 师宏公司(shihong)
 - BB登陆页(bb)
@@ -21,6 +22,8 @@ Some static pages when I worked as a trainee in Center Of Information & Network 
 ### ***技术***  
 - HTML+CSS+jQuery  
 - Less
+- Sass/Compass
+- Gulp
 - Bootstrap  
 - Animate.css  
 - Wow.js  
