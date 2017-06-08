@@ -1,33 +1,78 @@
 @import 'utils', 'variables', 'compass';
 
 #primary-footer {
-	$bgc: darken($style-color, 5%);
-	$text-color: #eee;
-	$line-color: darken($bgc, 5%);
+	$bgc: darken($style-color, 10%);
+	$text-color: #999;
+    $line-color: darken($style-color, 15%);
 
 	background-color: $bgc;
 	// background: url(../img/foot.jpg) no-repeat center right;
     // background-size: cover;
     padding: 20px 0 10px 0;
+    position: relative;
 
     // 二维码
     .qrcode {
-    	text-align: center;
-    	margin-bottom: 10px;
 
-    	img {
-       		width: 90px;
-	        height: auto;
-	    }
+        position: relative;
+
+        // 微信图标
+        i {
+            font-size: 20px;
+            color: $text-color;
+            cursor: pointer;
+            @include transition(color 0.6s);
+
+            &:hover {
+                color: #fff;
+            }
+        }
+        // 图片
+        img {
+            @include border-radius(5px);
+            position: absolute;
+            left: 0;
+            bottom: 40px;
+            display: none;
+            z-index: 9;
+            padding: 10px;
+            background-color: #ccc;
+        }
     }
 
     // 版权文字
-    .copyright {
-    	color: $text-color;
-    	border-left: 1px solid $line-color;
+    h5 {
+        color: #fff;
+        width: 60%;
+        padding: 0 0 10px 0;
+        margin: 10px 0;
+        border-bottom: 1px dashed $line-color;
+    }
+    p {
+        color: $text-color;
+        padding: 0;
+        margin: 3px 0;
+    }
+    i {
+        margin-right: 1em;
+    }
+}
 
-    	p {
-    		margin: 3px 0;
-    	}
+/* 返回顶部 */
+#go-to-top {
+    $go-to-top-wh: 40px;
+    $go-to-top-img: url(../img/up.png);
+    $go-to-top-hover-img: url(../img/up_hover.png);
+
+    position: fixed;
+    right: 35px;
+    bottom: 60px;
+    display: none;
+    width: $go-to-top-wh;
+    height: $go-to-top-wh;
+    cursor: pointer;
+    background-image: $go-to-top-img;
+    &:hover {
+        background-image: $go-to-top-hover-img;
     }
 }

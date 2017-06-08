@@ -1,0 +1,17 @@
+// 最多显示1行，超过部分用省略号代替
+@mixin ellipsis($width: 100%) {
+	width: $width;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+// 最多显示2行，超过部分用省略号代替
+@mixin ellipsis-2($width: 100%) {
+	width: $width;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}

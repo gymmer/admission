@@ -80,30 +80,37 @@
   $nav-line-bgc: darken($style-color, 5%);
   $nav-font-size: 15px;
 
-  background-color: $nav-bgc;
-  border: 0;
+  background-color: #EFF8FF;
   @include border-radius(0);
+  border: 0;
   margin-bottom: 0;
 
-  // 文字
-  a {
-    color: #fff;
-    font-size: $nav-font-size;
+  // 上边线
+  .container {
+    border-top: 1px solid #eee;
   }
 
-  // 一级菜单悬停时的背景色
-  .navbar-nav>.open>a {
-    background-color: $nav-hover-bgc;
+  // 一级菜单
+  .navbar-nav>li>a,
+  .navbar-brand {
+    color: $style-color;
+    font-size: $nav-font-size;
+    @include transition(background-color 0.6s);
+      &:hover {
+        color: $nav-hover-bgc;
+        background-color: #e7e7e7;
+      }
   }
 
   // 二级菜单
   .dropdown-menu {
     background-color: $nav-bgc;
-
     a {
+      color: #fff;
       font-size: $nav-font-size - 1;
       line-height: 2*$nav-font-size;
-
+      background-color: $nav-bgc;
+      @include transition(background-color 0.4s);
       &:hover {
         background-color: $nav-hover-bgc;
       }
@@ -118,6 +125,7 @@
   // 折叠按钮
   .navbar-toggle {
     border-color: $nav-line-bgc;
+    background-color: $nav-line-bgc;
 
     &:focus,
     &:hover {
