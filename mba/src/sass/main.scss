@@ -14,8 +14,6 @@ body {
 /* 首页轮播图 */
 #index-slider {
 	border-top: 6px solid #cbcbcb;
-    border-right: 3px solid #cbcbcb;
-    border-left: 3px solid #cbcbcb;
     position: relative;
 
 	// 导航点
@@ -123,12 +121,19 @@ $general-v-dist: 40px;
         background-color: $bgc;
     }
     
+    // 图片
     .img-container {
         height: 100px;
         width: 100%;
-        background: url(../img/test/banner.jpg) no-repeat center center;
+        background-image: url(../img/banner/banner.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
         background-size: cover;
-        // width: 100%;
+        @include transition(height 1s);
+    }
+    .expand {
+        height: 400px;
+        background-image: url(../img/banner/banner-expand.jpg);
     }
 
     // 按钮
@@ -176,8 +181,6 @@ $general-v-dist: 40px;
             margin-right: 0.8em;
         }
     }
-    
-    // padding-bottom: $general-v-dist;
 }
 
 /* 首页内容区域 */
@@ -198,7 +201,7 @@ $general-v-dist: 40px;
         background-color: $bgc;
     }
 
-    .aside-box, .content-box {
+    .aside-box, .middle-box {
         overflow: hidden;
         border: 1px solid $box-border;
         background-color: $box-bgc;
@@ -210,72 +213,133 @@ $general-v-dist: 40px;
         }
     }
 
-    // 侧边栏
-    .aside-box {
-        height: $big-box-h;
+    // 列表
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    li {
+        margin: 15px;
+        position: relative;
     }
 
-    // 中间栏目
-    .content-box {
-        height: $small-box-h;
-        
-        // 盒子头部
-        &-header {
-            position: relative;
-            border-bottom: 1px solid $line-color;
+    // 链接
+    a {
+        color: $link-color;
+        font-size: 15px;
+        font-family: $font-family-st;
+        @include transition(color 0.4s);
+        &:hover {
+            color: $link-hover-color;
+            text-decoration: none;
+        }
+    }
 
-            // 标题
-            h5 {
-                padding-left: 10px;
-                margin-left: 10px;
-                border-left: 4px solid $style-color;
-                font-size: 16px;
-                line-height: 20px;
+    //时间
+    time {
+        color: #888;
+        font-size: 13px;
+        font-family: $font-family-geo;
+    }
+
+    // 侧边栏
+    .aside-box {
+        $img-w: 100%;
+        $img-h: ($big-box-h - 40) / 6;  // 减去头部的高度
+        $icon-wh: 50px;
+
+        height: $big-box-h;
+
+        // 图片
+        .img-container {
+            position: relative;
+            width: $img-w;
+            height: $img-h;
+            border: 1px solid #eee;
+            margin-bottom: 20px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: $img-w $img-h;
+        }
+        .img-container-1 { background-image: url(../img/aside/aside-1.jpg); }
+        .img-container-2 { background-image: url(../img/aside/aside-2.jpg); }
+        .img-container-3 { background-image: url(../img/aside/aside-3.jpg); }
+        .img-container-4 { background-image: url(../img/aside/aside-4.jpg); }
+        .img-container-5 { background-image: url(../img/aside/aside-5.jpg); }
+
+        // 图片遮罩
+        .mask {
+            // visibility: hidden;
+            position: absolute;
+            width: $img-w;
+            height: $img-h;
+            background-color: #000;
+            
+            @include opacity(0);
+            @include transition(opacity 0.6s);
+
+            i {
+                // 盒子
+                display: block;
+                width: $icon-wh;
+                height: $icon-wh;
+                line-height: $icon-wh;
+                @include border-radius($icon-wh/2);
+                background-color: lighten($style-color, 20%);
+                // 居中
+                position: relative;
+                left: 50%;
+                margin-left: - $icon-wh/2;
+                top: 50%;
+                margin-top: - $icon-wh/2;
+                text-align: center;
+                // 文字
+                font-size: 30px;
+                color: #fff;
+                font-weight: bold;
             }
 
-            // 更多
-            .more {
-                position: absolute;
-                right: 10px;
-                top: 0;
-                font-size: 13px;
-                color: $style-color;
-
-                &:hover {
-                    color: darken($style-color, 10%);
-                    text-decoration: none;
-                }
+            &:hover {
+                @include opacity(0.7);
             }
         }
 
-        // 列表
-        &-list {
-            padding: 0;
-            margin: 0;
-            list-style: none;
+        
+    }
 
-            li {
-                margin: 15px;
-                position: relative;
-            }
+    // 中间栏目
+    .middle-box {
+        height: $small-box-h;
+        
+        
+    }
 
-            // 链接
-            a {
-                color: $link-color;
-                font-size: 15px;
-                font-family: $font-family-st;
-                @include transition(color 0.4s);
-                &:hover {
-                    color: $link-hover-color;
-                    text-decoration: none;
-                }
-            }
+    // 栏目头部
+    header {
+        position: relative;
+        border-bottom: 1px solid $line-color;
 
-            // 时间
-            time {
-                color: #888;
-                font-size: 13px;
-                font-family: $font-family-geo;
+        // 标题
+        h5 {
+            padding-left: 10px;
+            margin-left: 10px;
+            border-left: 4px solid $style-color;
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        // 更多
+        a {
+            position: absolute;
+            right: 10px;
+            top: 0;
+            font-size: 13px;
+            color: $style-color;
+
+            &:hover {
+                color: darken($style-color, 10%);
+                text-decoration: none;
             }
         }
     }
@@ -386,9 +450,9 @@ $general-v-dist: 40px;
 
 /* 首页相关链接 */
 #index-related {
-    $bgc: #EFF8FF;
+    $bgc: $light-blue-color;
     $text-color: #333;
-    $text-hover-color: #337ab7;
+    $text-hover-color: $style-color;
 
     background-color: $bgc;
     padding-bottom: $general-v-dist;

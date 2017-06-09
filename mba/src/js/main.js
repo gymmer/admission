@@ -1,54 +1,47 @@
 jQuery.noConflict();
 jQuery(function($) {
     /**
-     * 首页新闻类、预告类首次出现在屏幕上时的淡入动画
+     * 头部搜索栏
      */
-    // $('.main-box').addClass('wow fadeInUp').attr('data-wow-offset', '0');
-    // wow = new WOW({
-    //     boxClass: 'wow', // default
-    //     animateClass: 'animated', // default
-    //     offset: 0, // default
-    //     mobile: true, // default
-    //     live: true // default
-    // })
-    // wow.init();
+    function searchKeyWord() {
+        var keyWords = $('#primary-seach input').val().trim();
+        if (keyWords.length > 0) {
+            alert(keyWords);
+        }
+    }
+    $('#primary-seach i').click(function(){
+        searchKeyWord();
+    });
+    $('#primary-seach input').bind('keypress', function(event) {
+        //回车执行查询  
+        if (event.keyCode == "13") {              
+            event.preventDefault();   
+            searchKeyWord();
+        }
+    });
 
-    /*
-     * 阅读更多动画
+    /**
+     * 导航条悬停动画
      */
-    // $('.more').hover(function() {
-    //     $(this).addClass('animated jello');
-    // }, function() {
-    //     $(this).removeClass('animated jello');
-    // });
+    var hideMenuLi = function($li) {
+        $li.removeClass('open')
+            .find('.dropdown>a').attr('aria-expanded', 'false');
+    };
 
-    // var hideMenuLi = function($li) {
-    //     $li.removeClass('open')
-    //         .find('.dropdown>a').attr('aria-expanded', 'false');
-    // };
-
-    // var showMenuLi = function($li) {
-    //     $li.addClass('open')
-    //         .find('.dropdown>a').attr('aria-expanded', 'true');
-    // }
-    // $('#primary-nav-list .dropdown>a').hover(function() {
-    //     showMenuLi($(this).parent('li'));
-    //     hideMenuLi($(this).parent('li').siblings());
-    //     // $(this).parent('li').siblings().removeClass('open')
-    //     //     .find('.dropdown>a').attr('aria-expanded', 'false');
-    // },function(event) {
-    //     var fromElement = event.currentTarget;
-    //     var toElement = event.relatedTarget;
-    //     if (toElement.className.indexOf('dropdown')<0) {
-    //         // $(this).parent('li').removeClass('open');
-    //         // $(this).attr('aria-expanded', 'false');
-    //         hideMenuLi($(this).parent('li'));
-    //     }
-    // });
-
-    // $('.dropdown-menu').mouseout(function(event) {
-    //     // hideMenuLi($(this).parent('li'));
-    // });
+    var showMenuLi = function($li) {
+        $li.addClass('open')
+            .find('.dropdown>a').attr('aria-expanded', 'true');
+    }
+    $('#primary-nav-list .dropdown>a').hover(function() {
+        showMenuLi($(this).parent('li'));
+        hideMenuLi($(this).parent('li').siblings());
+    },function(event) {
+        var fromElement = event.currentTarget;
+        var toElement = event.relatedTarget;
+        if (toElement.className.indexOf('dropdown')<0) {
+            hideMenuLi($(this).parent('li'));
+        }
+    });
 
     /*
      * 鼠标悬停在二维码上时显示大图
@@ -61,6 +54,23 @@ jQuery(function($) {
             $(this).siblings('img').hide().removeClass('bounceIn').addClass('bounceOut');
         }else{
             $(this).siblings('img').removeClass('bounceIn').addClass('bounceOut');
+        }
+    });
+
+    /*
+     * 首页banner的展开与收起
+     */
+    $('#banner-expand-button').click(function() {
+        if($(this).attr('data-expand') === 'false') {
+            // 去展开
+            $(this).attr('data-expand', 'true')
+                .html('<i class="fa fa-chevron-up"></i>收起');
+            $('#index-banner-img-container').addClass('expand');
+        } else {
+            // 去收起
+            $(this).attr('data-expand', 'false')
+                .html('<i class="fa fa-chevron-down"></i>展开');
+            $('#index-banner-img-container').removeClass('expand');
         }
     });
 

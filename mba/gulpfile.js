@@ -238,13 +238,6 @@ gulp.task('server', function() {
 
 });
 
-gulp.task('clean-temp', function() {
-
-	// return gulp.src(path.resolve(OUT_PATH, TEMP_DIR))
-	// 	.pipe($.clean());
-
-});
-
 // 默认任务
 // 依赖clean任务
 gulp.task('default', ['clean'], function() {

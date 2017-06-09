@@ -2,7 +2,7 @@
 
 /* 工具区 */
 #primary-util {
-  $height: 22px;
+  $height: 40px;
   $bgc: #000;
   $color-bar-bgc: darken($style-color, 5%);
   $line-color: #999;
@@ -45,15 +45,10 @@
   li {
     display: inline-block;
     float: left;
-    width: 90px;
+    width: 80px;
     height: $height;
     line-height: $height;
-    text-align: center;
-    border-right: 1px solid $line-color;
-
-    &:last-child {
-      border-right: 0;
-    }
+    text-align: left;
   }
 
   // 文字颜色
@@ -64,11 +59,46 @@
       color: $text-hover-color;
     }
   }
+
+  // 搜索
+  $search-w: 120px;
+  $search-h: $height * 0.6;
+  $icon-w: 30px;
+
+  .search {
+    width: $icon-w;
+    @include transition(width 0.4s, padding 0.4s);
+  }
+  i {
+    color: $text-color;
+    cursor: pointer;
+  }
+  input {
+    display: inline;
+    height: $search-h;
+    line-height: $search-h;
+    width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    @include transition(width 0.4s, padding 0.4s);
+    background-color: $light-blue-color;
+  }
+
+  .search:hover {
+    width: $search-w;
+  }
+  .search:hover input{
+    width: $search-w - $icon-w;
+    padding: 0 10px;
+  }
 }
+
 
 /* logo */
 #primary-logo {
-  background-color: #EFF8FF;
+  background-color: $light-blue-color;
   padding: 5px 0;
   overflow: hidden;
 }
@@ -80,7 +110,7 @@
   $nav-line-bgc: darken($style-color, 5%);
   $nav-font-size: 15px;
 
-  background-color: #EFF8FF;
+  background-color: $light-blue-color;
   @include border-radius(0);
   border: 0;
   margin-bottom: 0;
