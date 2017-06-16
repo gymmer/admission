@@ -1,6 +1,5 @@
 .DS_Store
 
-/mba/dist
 /mba/build
 /mba/.sass-cache
 /mba/node_modules
