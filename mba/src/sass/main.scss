@@ -81,6 +81,8 @@ body {
 
 // 每个区域内的空白距离
 $general-v-dist: 40px;
+$small-box-h: 345px;
+$big-box-h: 2*$small-box-h + $general-v-dist;
 
 /* 首页每个区域的标题 */
 .index-sub-titile {
@@ -193,8 +195,6 @@ $general-v-dist: 40px;
     $link-color: #333;
     $link-hover-color: $style-color;
     $time-color: #666;
-    $small-box-h: 345px;
-    $big-box-h: 2*$small-box-h + $general-v-dist;
 
     background-color: $bgc;
 
@@ -239,81 +239,12 @@ $general-v-dist: 40px;
 
     //时间
     time {
-        color: #888;
-        font-size: 13px;
         font-family: $font-family-geo;
-    }
-
-    // 侧边栏
-    .aside-box {
-        $img-w: 100%;
-        $img-h: ($big-box-h - 40) / 6;  // 减去头部的高度
-        $icon-wh: 50px;
-
-        height: $big-box-h;
-
-        // 图片
-        .img-container {
-            position: relative;
-            width: $img-w;
-            height: $img-h;
-            border: 1px solid #eee;
-            margin-bottom: 20px;
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: $img-w $img-h;
-        }
-        .img-container-1 { background-image: url(../img/aside/aside-1.jpg); }
-        .img-container-2 { background-image: url(../img/aside/aside-2.jpg); }
-        .img-container-3 { background-image: url(../img/aside/aside-3.jpg); }
-        .img-container-4 { background-image: url(../img/aside/aside-4.jpg); }
-        .img-container-5 { background-image: url(../img/aside/aside-5.jpg); }
-
-        // 图片遮罩
-        .mask {
-            // visibility: hidden;
-            position: absolute;
-            width: $img-w;
-            height: $img-h;
-            background-color: #000;
-            
-            @include opacity(0);
-            @include transition(opacity 0.6s);
-
-            i {
-                // 盒子
-                display: block;
-                width: $icon-wh;
-                height: $icon-wh;
-                line-height: $icon-wh;
-                @include border-radius($icon-wh/2);
-                background-color: lighten($style-color, 20%);
-                // 居中
-                position: relative;
-                left: 50%;
-                margin-left: - $icon-wh/2;
-                top: 50%;
-                margin-top: - $icon-wh/2;
-                text-align: center;
-                // 文字
-                font-size: 30px;
-                color: #fff;
-                font-weight: bold;
-            }
-
-            &:hover {
-                @include opacity(0.7);
-            }
-        }
-
-        
     }
 
     // 中间栏目
     .middle-box {
         height: $small-box-h;
-        
-        
     }
 
     // 栏目头部
@@ -349,46 +280,53 @@ $general-v-dist: 40px;
 /* 新闻动态 */
 .news-list {
     li {
-        $img-w: 100px;
-        $img-h: 80px;
+        $img-w: 100%;
+        $img-h: 120px;
+        $line-color: #ccc;
+
+        border-bottom: 1px dashed $line-color;
+        padding-bottom: 10px;
 
         // 文字
         .text-container {
-            position: absolute;
-            left: $img-w;
-            top: 0;
-            padding-left: 10px;
-            @include ellipsis-2(1-$img-w);
+            @include ellipsis(100%);
         }
-        time {
-            display: block;
-            margin: 8px 0;
+        &:first-child .text-container {
+            @include ellipsis-2(100%);
+            white-space: normal;
         }
-        i {
-            margin-right: 1em;
+        &:last-child {
+            padding-bottom: 0;
+            border-bottom: 0;
         }
-
+        
         // 图片
         .img-container {
-            width: $img-w;
-            height: $img-h;
-            overflow: hidden;
-            @include box-shadow(2px 2px 1px rgba(0,0,0,0.1));
+            @include img-hover-mask($img-w, $img-h, $style-color, 0.6, 0.4s);
+            @include img-hover-scale($img-w, $img-h, 1.1, 0.6s);
+            margin-bottom: 10px;
         }
 
-        img {
-            display: inline-block;
-            width: $img-w;
-            height: $img-h;
-            max-width: 100%;
-            @include transition(transform 0.6s);
+        // 遮罩上的文字
+        time {
+            color: #fff;         
+            font-size: 16px;
+            position: absolute;
+            left: 0;
+            bottom: 0.5em;
         }
 
-        // 图片缩放
-        &:hover {
-            img {
-                @include transform(scale(1.1));
-            }
+        p {
+            color: #fff;
+            font-size: 20px;
+            font-family: $font-family-wryh;
+            padding: 0.5em;
+            padding-bottom: 0;
+            @include ellipsis-2(100%);
+        }
+
+        i {
+            margin: 0 0.5em;
         }
     }
 
@@ -398,6 +336,11 @@ $general-v-dist: 40px;
 .entrance-list {
     li {
         @include ellipsis(100%);
+    }
+
+    time {
+        color: #888;
+        font-size: 13px;
     }
 }
 
@@ -409,7 +352,6 @@ $general-v-dist: 40px;
     $light-color: #e8e8e8;
 
     li {
-        
         height: $h;
         // 文字
         a {
@@ -424,28 +366,61 @@ $general-v-dist: 40px;
             position: absolute;
             left: 0;
             top: 0;
-            display: inline-block;
-            width: $time-w;
-            height: $h;
-            line-height: $h/2;
+            @include calendar-card($time-w, $h, $dark-color, $light-color);
         }
-        .top-half, .bottom-half {
-            width: 100%;
-            display: block;
-            text-align: center;
-            position: absolute;
-            left: 0;
-        }
-        .top-half {
-            top: 0;
-            background-color: $dark-color;
-            color: $light-color;
-        }
-        .bottom-half {
-            bottom: 0;
-            background-color: $light-color;
-            color: $dark-color;
-        }
+    }
+}
+
+/* 首页侧边栏 */
+.aside-box {
+    $img-w: 100%;
+    $img-h: ($big-box-h - 40) / 6;  // 减去头部的高度
+    $icon-wh: 50px;
+
+    height: $big-box-h;
+
+    // 图片
+    .img-container {
+        @include img-hover-mask($img-w, $img-h, #000, 0.7, 0.6s);
+        border: 1px solid #eee;
+        margin-bottom: 20px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: $img-w $img-h;
+    }
+    .img-container-1 { background-image: url(../img/aside/aside-1.jpg); }
+    .img-container-2 { background-image: url(../img/aside/aside-2.jpg); }
+    .img-container-3 { background-image: url(../img/aside/aside-3.jpg); }
+    .img-container-4 { background-image: url(../img/aside/aside-4.jpg); }
+    .img-container-5 { background-image: url(../img/aside/aside-5.jpg); }
+
+    // 文字
+    .title {
+        position: absolute;
+        width: $img-w;
+        height: $img-h;
+        line-height: $img-h/1.5;
+        text-align: center;
+        color: #fff;
+        font-size: 18px;
+        font-family: $font-family-ht;
+    }
+
+    i {
+        // 盒子
+        display: block;
+        width: $icon-wh;
+        height: $icon-wh;
+        line-height: $icon-wh;
+        @include border-radius($icon-wh/2);
+        background-color: lighten($style-color, 20%);
+        // 居中
+        @include center($icon-wh, $icon-wh);
+        text-align: center;
+        // 文字
+        font-size: 30px;
+        color: #fff;
+        font-weight: bold;
     }
 }
 
