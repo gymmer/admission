@@ -462,6 +462,7 @@ body {
   height: 120px;
   overflow: hidden;
   margin-bottom: 10px;
+  display: none;
 }
 .news-list li .img-container .mask {
   position: absolute;
@@ -493,6 +494,9 @@ body {
   -ms-transform: scale(1.1);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+}
+.news-list li:first-child .img-container {
+  display: block;
 }
 .news-list li time {
   color: #fff;

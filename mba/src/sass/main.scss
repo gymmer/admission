@@ -305,6 +305,10 @@ $big-box-h: 2*$small-box-h + $general-v-dist;
             @include img-hover-mask($img-w, $img-h, $style-color, 0.6, 0.4s);
             @include img-hover-scale($img-w, $img-h, 1.1, 0.6s);
             margin-bottom: 10px;
+            display: none;
+        }
+        &:first-child .img-container {
+            display: block;
         }
 
         // 遮罩上的文字
