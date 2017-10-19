@@ -1,0 +1,30 @@
+// 滚动图片
+.rollpic() {
+    .rollpic {
+        display: inline-block;
+        .prev, .next {
+            height: 38px;
+            width: 38px;
+            cursor: pointer;
+            float: left;
+            background: url(../../img/unslider-arrow.png) no-repeat 0 0;
+            margin-top: 100px;
+        }
+
+        .prev{
+            background-position: 0 0;
+
+            &:hover {
+                background-position: 0 -38px;
+            }
+        }
+
+        .next{
+            background-position: 0 -76px;
+
+            &:hover{
+                background-position: 0 -114px;
+            }
+        }
+    }
+}

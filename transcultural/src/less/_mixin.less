@@ -1,0 +1,56 @@
+// 强制不换行，超出部分用...省略
+.ellipsis(@w) {
+    width: @w;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+// 字体
+@base-font: Helvetica, Arial, sans-serif;
+.font-family() {
+    font-family: @base-font;
+}
+
+.font-family(hei) {
+    font-family: 'simhei', '黑体', @base-font;
+}
+
+.font-family(yahei) {
+    font-family: 'Microsoft Yahei', '微软雅黑', @base-font;
+}
+
+.font-family(awesome) {
+    font-family: FontAwesome;
+}
+
+// 清除浮动
+.clearfix() {
+    zoom: 1;
+    &:after {
+        font-size: 0;
+        display: block;
+        visibility: hidden;
+        clear: both;
+        height: 0;
+        content: ' ';
+    }
+}
+.clearfix {
+    zoom: 1;
+    &:after {
+        font-size: 0;
+        display: block;
+        visibility: hidden;
+        clear: both;
+        height: 0;
+        content: ' ';
+    }
+}
+
+// 圆，输入为半径
+.circle(@r: 0) {
+    width: @r * 2;
+    height: @r * 2;
+    .border-radius(50%);
+}

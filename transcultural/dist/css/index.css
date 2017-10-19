@@ -1,0 +1,231 @@
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  font-size: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: ' ';
+}
+#index-slider {
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+#index-slider .bd,
+#index-slider .bd li,
+#index-slider .bd img {
+  width: 100%;
+  height: auto;
+}
+#index-slider .hd {
+  margin-top: 2px;
+  height: 58px;
+  width: 100%;
+  position: static;
+  padding: 0;
+}
+#index-slider .hd li {
+  position: relative;
+  display: inline-block;
+  float: left;
+  margin-right: 5px;
+  cursor: pointer;
+  width: 150px;
+  height: 100%;
+}
+#index-slider .hd img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#index-slider .hd i {
+  position: absolute;
+  display: block;
+  z-index: 9;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+#index-slider .hd li.active i {
+  width: 11px;
+  height: 6px;
+  background: url(../../img/iconpic-arrow-up.png) no-repeat 0 0;
+  top: -8px;
+  left: 50%;
+  margin-left: -5px;
+  bottom: auto;
+  right: auto;
+}
+#index-slider .pagination {
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  cursor: pointer;
+}
+#index-slider .pagination .prev {
+  float: left;
+  margin-left: 30px;
+}
+#index-slider .pagination .next {
+  float: right;
+  margin-right: 30px;
+}
+#index-slider .pagination .prev,
+#index-slider .pagination .next {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: lighter;
+  transition: background-color 400ms;
+}
+#index-slider .pagination .prev:hover,
+#index-slider .pagination .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+#vedio-slider {
+  padding-top: 15px;
+}
+#vedio-slider .slider {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  z-index: 1;
+}
+#vedio-slider .slider .bd,
+#vedio-slider .slider .bd li,
+#vedio-slider .slider .bd img {
+  width: 100%;
+  height: 100%;
+}
+#vedio-slider .slider .bd {
+  z-index: 2;
+  overflow: hidden;
+}
+#vedio-slider .slider .bd li {
+  float: left;
+  width: 100%;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#vedio-slider .slider .bd a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#vedio-slider .slider .bd img {
+  display: block;
+}
+#vedio-slider .slider .hd {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  padding: 0 10px;
+  text-align: center;
+}
+#vedio-slider .slider .hd li {
+  display: inline-block;
+  text-align: center;
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: #C2C2C2;
+}
+#vedio-slider .slider .hd li.active {
+  background-color: #222;
+}
+#vedio-slider .slider .dots li {
+  width: 10px;
+  height: 10px;
+  font-size: 0px;
+  line-height: 0px;
+  border-radius: 50%;
+}
+#vedio-slider .slider .numbox li {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 13px;
+  font-family: Arial;
+  font-weight: bold;
+  text-indent: inherit;
+}
+#vedio-slider .slider .numbox li.active {
+  color: #fff;
+}
+#vedio-slider .slider .rectangle li {
+  width: 40px;
+  height: 10px;
+  font-size: 0px;
+  line-height: 0px;
+}
+#vedio-slider .slider .hd {
+  bottom: 15px;
+  text-align: right;
+}
+#vedio-slider .slider .hd li {
+  background-color: ccc;
+}
+#vedio-slider .slider .hd li.active {
+  background-color: #0068b7;
+}
+#vedio-slider .maskWraper .maskBar {
+  bottom: 0;
+  text-align: left;
+}
+#book-rollpic {
+  text-align: center;
+}
+#book-rollpic .rollpic {
+  display: inline-block;
+}
+#book-rollpic .rollpic .prev,
+#book-rollpic .rollpic .next {
+  height: 38px;
+  width: 38px;
+  cursor: pointer;
+  float: left;
+  background: url(../../img/unslider-arrow.png) no-repeat 0 0;
+  margin-top: 100px;
+}
+#book-rollpic .rollpic .prev {
+  background-position: 0 0;
+}
+#book-rollpic .rollpic .prev:hover {
+  background-position: 0 -38px;
+}
+#book-rollpic .rollpic .next {
+  background-position: 0 -76px;
+}
+#book-rollpic .rollpic .next:hover {
+  background-position: 0 -114px;
+}
+#book-rollpic .rollpicshow {
+  border: none;
+}
+#book-rollpic .maskWraper {
+  width: 200px;
+  height: 234px;
+}
+#book-rollpic .maskWraper img {
+  width: 100%;
+  height: 100%;
+}
+#index-notice .scrollText {
+  height: 12px;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -11,6 +11,7 @@ Some static pages when I worked as a trainee in Center Of Information & Network 
 - 本科生招生网(admission)  
 - 励耘学院(liyun)  
 - 经管学院MBA(mba)
+- 跨文化研究院(transcultural)
 - 文化研究院(cultureCenter)
 - G20中心(G20)
 - 师宏公司(shihong)

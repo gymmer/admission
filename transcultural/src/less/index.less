@@ -1,0 +1,53 @@
+@import "_mixin";
+@import "components/_slider";
+@import "components/_rollpic";
+
+#index-slider {
+    .thumbnail-slider();
+}
+
+#vedio-slider {
+    padding-top: 15px;
+    .indicator-slider();
+    .slider .hd {
+        bottom: 15px;
+        text-align: right;
+        li {
+            background-color: ccc;
+            &.active {
+                background-color: #0068b7;
+            }
+        }
+    }
+    .maskWraper {
+        .maskBar {
+            bottom: 0;
+            text-align: left;
+        }
+    }
+}
+
+#book-rollpic {
+    text-align: center;
+    .rollpic();
+    .rollpicshow {
+        border: none;
+    }
+    .maskWraper {
+        width: 200px;
+        height: 234px;
+    
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+#index-notice {
+    // width :300px;
+    .scrollText{
+        height: 12px;
+        overflow: hidden;
+    }
+}

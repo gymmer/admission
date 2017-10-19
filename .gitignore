@@ -1,5 +1,9 @@
 .DS_Store
+.vscode
 
 /mba/build
 /mba/.sass-cache
 /mba/node_modules
+
+/transcultural/node_modules
+/transcultural/npm-debug.log
