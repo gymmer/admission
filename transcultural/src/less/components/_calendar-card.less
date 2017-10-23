@@ -1,0 +1,26 @@
+
+// 日历卡片组件
+.calendar-card(@width, @height, @dark-color, @light-color) {
+    display: inline-block;
+    width: @width;
+    height: @height;
+    line-height: @height/2;
+
+    span {
+        width: 100%;
+        display: block;
+        text-align: center;
+        position: absolute;
+        left: 0;
+    }
+    span:first-child {
+        top: 0;
+        background-color: @dark-color;
+        color: @light-color;
+    }
+    span:last-child {
+        bottom: 0;
+        background-color: @light-color;
+        color: @dark-color;
+    }
+}

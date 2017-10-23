@@ -5,7 +5,9 @@
     width:100%;
     text-align:center;
     position: relative;
-
+    .slider {
+        position: relative;
+    }
     // 大图
     .bd,.bd li,.bd img {
         width: 100%;
@@ -15,15 +17,18 @@
     // 缩略图
     .hd {
         margin-top: 2px;
-        height :58px;
-        width: 100%;
-        position: static;
+        height: 60px;
+        width: 60%;
+        position: absolute;
         padding: 0;
+        right: 0;
+        bottom: 15px;
+        left: auto;
+        overflow: hidden;
 
         li {
             position: relative;
             display: inline-block;
-            float: left;
             margin-right: 5px;
             cursor: pointer;
             width: 150px;
@@ -43,20 +48,30 @@
             left: 0;
             top: 0;
             right: 0;
-            bottom :0;
-            background-color: rgba(0,0,0,0.6);
+            bottom : 0;
+            background-color: rgba(0,0,0,0.4);
         }
 
         li.active i {
             width: 11px;
             height: 6px;
-            background: url(../../img/iconpic-arrow-up.png) no-repeat 0 0;;
-            top: -8px;
+            // background: url(../../img/iconpic-arrow-up.png) no-repeat 0 0;
+            top: -6px;
             left: 50%;
             margin-left: -5px;
             bottom: auto;
             right: auto;
         }
+    }
+
+    // 遮罩文字
+    .maskBar {
+        bottom: 0;
+        height: 60px;
+        line-height: 60px;
+        padding: 15px 0 15px 30px;
+        background-color: rgba(0,0,0,0.8);
+        font-size: 18px;
     }
 
     // 分页按钮
@@ -136,9 +151,9 @@
             z-index: 3;
             left: 0;
             right: 0;
-            bottom:10px;
+            bottom: 15px;
             padding: 0 10px;
-            text-align: center;
+            text-align: right;
 
             li{
                 display:inline-block;
@@ -148,9 +163,12 @@
                 background-color:#C2C2C2;
 
                 &.active{
-                    background-color:#222;
+                    background-color: @yellow;
                 }
             }
+        }
+        .maskBar {
+            bottom: 0;
         }
         // 圆点
         .dots li{

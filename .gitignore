@@ -1,5 +1,6 @@
 .DS_Store
 .vscode
+npm-debug.log
 
 /mba/build
 /mba/.sass-cache

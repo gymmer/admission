@@ -1,53 +1,151 @@
 @import "_mixin";
+@import "_variables";
+@import "_header";
 @import "components/_slider";
 @import "components/_rollpic";
+@import "components/_calendar-card";
+
+body {
+    font-family: @font-yahei;
+    font-size: 14px;
+    box-sizing: border-box;
+}
 
 #index-slider {
     .thumbnail-slider();
 }
 
 #vedio-slider {
-    padding-top: 15px;
     .indicator-slider();
-    .slider .hd {
-        bottom: 15px;
-        text-align: right;
-        li {
-            background-color: ccc;
-            &.active {
-                background-color: #0068b7;
-            }
-        }
-    }
-    .maskWraper {
-        .maskBar {
-            bottom: 0;
-            text-align: left;
-        }
-    }
 }
 
 #book-rollpic {
-    text-align: center;
     .rollpic();
-    .rollpicshow {
-        border: none;
+}
+
+#index-notice {
+    background-color: #efefef;
+    // 标题
+    h4 {
+        font-size: 16px;
+        font-family: @base-font;
+        color: darken(@yellow, 10%);
+        margin-right: 20px;
+        letter-spacing: 2px;
     }
-    .maskWraper {
-        width: 200px;
-        height: 234px;
-    
-        img {
-            width: 100%;
-            height: 100%;
+    // 文字
+    .scrollText{
+        height: 12px;
+        overflow: hidden;
+        .ellipsis(100%);
+    }
+    // 控制按钮
+    .cl {
+        position: relative;
+        height: 36px;
+
+        .btn {
+            @btn-size: 19px;
+            display: inline-block;
+            width: @btn-size;
+            height: @btn-size;
+            line-height: @btn-size;
+            padding: 0;
+            position: absolute;
+            left: 15px;
+
+            i:before {
+                line-height: @btn-size;
+            }
+        }
+        .up {
+            bottom: 0;
+        }
+        .down {
+            top: 0;
         }
     }
 }
 
-#index-notice {
-    // width :300px;
-    .scrollText{
-        height: 12px;
-        overflow: hidden;
+#index-course-list,
+#index-conference-list {
+    span {
+        display: inline-block;
+        .ellipsis(80%);
+    }
+
+    time {
+        color: #888;
+        float: right;
+        font-size: 13px;
+        font-family: @font-geo;
+    }
+}
+
+#index-latest-list {
+    @h: 46px;
+    @time-w: 60px;
+    @dark-color: darken(@blue, 15%);
+    @light-color: #e8e8e8;
+
+    li {
+        height: @h;
+        position: relative;
+        margin-bottom: 9px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        // 文字
+        a {
+            position: absolute;
+            left: @time-w;
+            top: 0;
+            padding-left: 10px;
+            .ellipsis-2(80%);
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        // 时间
+        time {
+            font-family: @font-geo;
+            position: absolute;
+            left: 0;
+            top: 0;
+            .calendar-card(@time-w, @h, @dark-color, @light-color);
+        }
+    }
+}
+
+.panel {
+    border: none;
+
+    h4 {
+        border-left: 5px solid @yellow;
+        padding-left: 15px;
+        font-size: 16px;
+        color: darken(@blue, 10%);
+        font-weight: bold;
+        font-family: @base-font;
+    }
+    .panel-header {
+        position: relative;
+        background-color: #fff;
+
+        a {
+            position: absolute;
+            top: 20px;
+            right: 15px;
+            color: @yellow;
+            font-size: 12px;
+            &:hover {
+                text-decoration: none;
+                color: darken(@yellow, 10%);
+            }
+        }
+    }
+    .panel-body {
+        min-height: 230px;
     }
 }

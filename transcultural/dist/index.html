@@ -28,10 +28,39 @@
 <body id="index">
     <header id="primary-header">
         <div class="container">
-            <h1><img src="img/BNU-logo.png" alt="BNU-logo" class="logo"> 跨文化研究院</h1>
+            <div class="row cl">
+                <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12 hidden-xs">
+                    <img src="img/BNU-logo.png" alt="BNU-logo" class="logo">
+                    <img src="img/site-logo.png" alt="site-logo" class="logo">
+                </div>
+                <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12">
+                    <h1>
+                        北京师范大学跨文化研究院
+                    </h1>
+                    <h3>
+                        College of Transcultural Studies, BNU
+                    </h3>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 hidden-sm hidden-xs">
+                    <form method="get" action="/search.do" class="text-r">
+                        <input type="text" placeholder="请输入关键词" class="input-text ac_input" name="search_text" value="" id="search_text" autocomplete="off" style="width:140px"><button type="submit" class="btn btn-primary" id="search_button">搜索</button>
+                    </form>
+                    <div class="topnav">
+                        <div class="wp cl">
+                            <div class="r">
+                                <span class="r_nav"><a href="http://www.bnu.edu.cn" target="_blank">学校首页</a></span>
+                                <span class="pipe">|</span>
+                                <span class="r_nav"><a href="http://bnudfsl.cn/" target="_blank">旧版主页</a></span>
+                                <span class="pipe">|</span>
+                                <span class="r_nav"><a href="#" target="_blank">English</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
-    <header class="navbar-wrapper">
+    <header id="primary-nav" class="navbar-wrapper">
         <div class="navbar navbar-black">
             <div class="container cl">
                 <a class="logo navbar-logo-m f-l mr-10 visible-xs">导航</a>
@@ -97,142 +126,355 @@
         </div>
     </header>
     <main>
-        <div class="container">
-            <div id="index-slider" class="bg-fff box-shadow radius">
-                <div class="slider">
-                    <div class="bd bg-fff">
-                        <ul>
-                            <li><a href="#"><img src="img/slide1.jpg" ></a></li>
-                            <li><a href="#"><img src="img/slide2.jpg" ></a></li>
-                            <li><a href="#"><img src="img/slide1.jpg" ></a></li>
-                            <li><a href="#"><img src="img/slide2.jpg" ></a></li>
-                            <li><a href="#"><img src="img/slide1.jpg" ></a></li>
-                        </ul>
-                    </div>
-                    <ol class="hd cl">
-                        <li><i></i><img src="img/slide1.jpg"></li>
-                        <li><i></i><img src="img/slide2.jpg"></li>
-                        <li><i></i><img src="img/slide1.jpg"></li>
-                        <li><i></i><img src="img/slide2.jpg"></li>
-                        <li><i></i><img src="img/slide1.jpg"></li>
-                    </ol>
-                    <div class="pagination">
-                        <span class="prev"><i class="fa fa-chevron-left"></i></span>
-                        <span class="next"><i class="fa fa-chevron-right"></i></span>
-                    </div>
-                </div>
-            </div>
-            <div id="index-notice">
-                <div class="cl text-r"><span class="btn up">&uarr; 向上</span> <span class="btn down">&darr; 向下</span></div>
-                <div class="scrollText bk_gray pd-10 mt-10">
+        <div id="index-slider" class="bg-fff radius hidden-sm hidden-xs">
+            <div class="slider">
+                <div class="bd bg-fff">
                     <ul>
-                        <li><a href="#">2018年北师大跨文化学研究生招生专业目录</a></li>                
-                        <li><a href="#">2017年跨文化学研究生国际课程班电子宣传册</a></li>
-                        <li><a href="#">[法]Michel Zink丨中世纪文学与艺术：一种新的自我意识</a></li>
-                        <li><a href="#">[法]Antoine Compagnon丨抵抗诠释</a></li>
-                        <li><a href="#">[法]法宝丨第一节 早期佛教中的我与非我</a></li>
-                        <li><a href="#">[法]法宝丨第二节 佛学在法国的接受（16-19世纪）</a></li>
-                        <li><a href="#">[中]王邦维丨第一节 譬喻经、譬喻文学与譬喻师：文本怎么创造与传承？（一）</a></li>
-                        <li><a href="#">[中]王宁 | 语言文字与文本解读</a></li>
+                        <div class="maskWraper">
+                            <a href="#">
+                                <img src="img/slide1.jpg">
+                                <div class="maskBar text-l">汤一介、汪德迈谈中西文化的互补性</div>
+                            </a>
+                        </div>
+                        <div class="maskWraper">
+                            <a href="#">
+                                <img src="img/slide2.jpg">
+                                <div class="maskBar text-l">汤一介、汪德迈谈中西文化的互补性</div>
+                            </a>
+                        </div>
+                        <div class="maskWraper">
+                            <a href="#">
+                                <img src="img/slide1.jpg">
+                                <div class="maskBar text-l">汤一介、汪德迈谈中西文化的互补性</div>
+                            </a>
+                        </div>
+                        <div class="maskWraper">
+                            <a href="#">
+                                <img src="img/slide2.jpg">
+                                <div class="maskBar text-l">汤一介、汪德迈谈中西文化的互补性</div>
+                            </a>
+                        </div>
+                        <div class="maskWraper">
+                            <a href="#">
+                                <img src="img/slide1.jpg">
+                                <div class="maskBar text-l">汤一介、汪德迈谈中西文化的互补性</div>
+                            </a>
+                        </div>
                     </ul>
                 </div>
+                <ol class="hd cl">
+                    <li><i></i><img src="img/slide1.jpg"></li>
+                    <li><i></i><img src="img/slide2.jpg"></li>
+                    <li><i></i><img src="img/slide1.jpg"></li>
+                    <li><i></i><img src="img/slide2.jpg"></li>
+                    <li><i></i><img src="img/slide1.jpg"></li>
+                </ol>
+                <div class="pagination">
+                    <span class="prev"><i class="fa fa-chevron-left"></i></span>
+                    <span class="next"><i class="fa fa-chevron-right"></i></span>
+                </div>
             </div>
-            <div class="row clearfix">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <div id="vedio-slider">
-                        <div class="slider">
-                            <div class="bd">
-                                <ul>
-                                    <li>
-                                        <div class="maskWraper">
-                                            <a href="#">
-                                                <img src="http://psych.bnu.edu.cn/Portals/0/NewsArticle/ImageFile/375/6e5b39af-6bc8-44ce-8f70-4fce501e117f.jpg">
-                                                <div class="maskBar text-c">汤一介、汪德迈谈中西文化的互补性</div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="maskWraper">
-                                            <a href="#">
-                                                <img src="http://psych.bnu.edu.cn/Portals/0/NewsArticle/ImageFile/375/bd7836b7-bdae-45a5-9bd6-1b2a326040aa.jpg">
-                                                <div class="maskBar text-c">汤一介：启蒙在中国的艰难历程</div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <ol class="hd cl dots">
-                                <li>1</li>
-                                <li>2</li>
-                            </ol>
+        </div>
+        <div id="index-notice">
+            <div class="container pt-20 pb-20">
+                <div class="row cl">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <h4 class="text-r">热点关注</h4>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-7">
+                        <div class="scrollText bk_gray pt-10 pb-10">
+                            <ul>
+                                <li><a href="#">2018年北师大跨文化学研究生招生专业目录譬喻经、譬喻文学与譬喻师：文本怎么创造与传承？（一）</a></li>                
+                                <li><a href="#">2017年跨文化学研究生国际课程班电子宣传册</a></li>
+                                <li><a href="#">[法]Michel Zink丨中世纪文学与艺术：一种新的自我意识</a></li>
+                                <li><a href="#">[法]Antoine Compagnon丨抵抗诠释</a></li>
+                                <li><a href="#">[法]法宝丨第一节 早期佛教中的我与非我</a></li>
+                                <li><a href="#">[法]法宝丨第二节 佛学在法国的接受（16-19世纪）</a></li>
+                                <li><a href="#">[中]王邦维丨第一节 譬喻经、譬喻文学与譬喻师：文本怎么创造与传承？（一）</a></li>
+                                <li><a href="#">[中]王宁 | 语言文字与文本解读</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-1">
+                        <div class="cl">
+                            <span class="btn up"><i class="fa fa-angle-down fa-w"></i></span>
+                            <span class="btn down"><i class="fa fa-angle-up fa-w"></i></span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                    <div id="book-rollpic">
-                        <div class="rollpic cl">
-                            <a href="javascript:void(0)" class="prev"></a>
-                            <div class="rollpicshow">
-                                <ul>
-                                    <li>
-                                        <div class="maskWraper">
-                                            <a href="#">
-                                                <img src="http://bnudfsl.cn/UserFiles/Image/%E7%8E%8B%E9%82%A6%E7%BB%B4%E3%80%8A%E8%B7%A8%E6%96%87%E5%8C%96%E7%9A%84%E6%83%B3%E8%B1%A1%EF%BC%9A%E6%96%87%E7%8C%AE%E3%80%81%E7%A5%9E%E8%AF%9D%E4%B8%8E%E5%8E%86%E5%8F%B2%E3%80%8B.jpg">
-                                                <div class="maskBar text-c">[中]王邦维《跨文化的想象》</div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="maskWraper">
-                                            <a href="#">
-                                                <img src="http://bnudfsl.cn/UserFiles/Image/%E7%8E%8B%E9%82%A6%E7%BB%B4%E3%80%8A%E8%B7%A8%E6%96%87%E5%8C%96%E7%9A%84%E6%83%B3%E8%B1%A1%EF%BC%9A%E6%96%87%E7%8C%AE%E3%80%81%E7%A5%9E%E8%AF%9D%E4%B8%8E%E5%8E%86%E5%8F%B2%E3%80%8B.jpg">
-                                                <div class="maskBar text-c">[中]王一川《跨文化艺术美学》</div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="maskWraper">
-                                            <a href="#">
-                                                <img src="http://bnudfsl.cn/UserFiles/Image/%E7%8E%8B%E9%82%A6%E7%BB%B4%E3%80%8A%E8%B7%A8%E6%96%87%E5%8C%96%E7%9A%84%E6%83%B3%E8%B1%A1%EF%BC%9A%E6%96%87%E7%8C%AE%E3%80%81%E7%A5%9E%E8%AF%9D%E4%B8%8E%E5%8E%86%E5%8F%B2%E3%80%8B.jpg">
-                                                <div class="maskBar text-c">[中]董晓萍《跨文化民俗学》</div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="maskWraper">
-                                            <a href="#">
-                                                <img src="http://bnudfsl.cn/UserFiles/Image/%E7%8E%8B%E9%82%A6%E7%BB%B4%E3%80%8A%E8%B7%A8%E6%96%87%E5%8C%96%E7%9A%84%E6%83%B3%E8%B1%A1%EF%BC%9A%E6%96%87%E7%8C%AE%E3%80%81%E7%A5%9E%E8%AF%9D%E4%B8%8E%E5%8E%86%E5%8F%B2%E3%80%8B.jpg">
-                                                <div class="maskBar text-c">[中]董晓萍等《跨文化民俗志》</div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="maskWraper">
-                                            <a href="#">
-                                                <img src="http://bnudfsl.cn/UserFiles/Image/%E7%8E%8B%E9%82%A6%E7%BB%B4%E3%80%8A%E8%B7%A8%E6%96%87%E5%8C%96%E7%9A%84%E6%83%B3%E8%B1%A1%EF%BC%9A%E6%96%87%E7%8C%AE%E3%80%81%E7%A5%9E%E8%AF%9D%E4%B8%8E%E5%8E%86%E5%8F%B2%E3%80%8B.jpg">
-                                                <div class="maskBar text-c">[中]董晓萍《钟敬文与中国民俗学派》</div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="maskWraper">
-                                            <a href="#">
-                                                <img src="http://bnudfsl.cn/UserFiles/Image/%E7%8E%8B%E9%82%A6%E7%BB%B4%E3%80%8A%E8%B7%A8%E6%96%87%E5%8C%96%E7%9A%84%E6%83%B3%E8%B1%A1%EF%BC%9A%E6%96%87%E7%8C%AE%E3%80%81%E7%A5%9E%E8%AF%9D%E4%B8%8E%E5%8E%86%E5%8F%B2%E3%80%8B.jpg">
-                                                <div class="maskBar text-c">[爱]于鲁·瓦尔克《信仰 体裁 社会》</div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="maskWraper">
-                                            <a href="#">
-                                                <img src="http://bnudfsl.cn/UserFiles/Image/%E7%8E%8B%E9%82%A6%E7%BB%B4%E3%80%8A%E8%B7%A8%E6%96%87%E5%8C%96%E7%9A%84%E6%83%B3%E8%B1%A1%EF%BC%9A%E6%96%87%E7%8C%AE%E3%80%81%E7%A5%9E%E8%AF%9D%E4%B8%8E%E5%8E%86%E5%8F%B2%E3%80%8B.jpg">
-                                                <div class="maskBar text-c">[法]劳格文等《中国客家地方社会研究》</div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row cl">
+                <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    <div id="index-course-list" class="panel panel-default">
+                        <div class="panel-header">
+                            <h4>跨文化学研究生国际课程班</h4>
+                            <a href="#">更多>></a>
+                        </div>
+                        <div class="panel-body">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <span>[中]董晓萍丨第四节 跨文化学与民俗学：框架、方法与特殊训练</span>
+                                        <time>2017-06-12</time>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>[中]董晓萍丨第三节 民俗叙事与手工业知识</span>
+                                        <time>2017-06-10</time>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>[中]韩琦丨从凡尔赛到紫禁城：康熙时代中国和法国的科学交流</span>
+                                        <time>2017-05-23</time>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>[俄]易福成丨跨文化《孙子兵法》研究</span>
+                                        <time>2017-02-04</time>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>[法]劳格文丨中国传统社会的结构与动力</span>
+                                        <time>2016-12-25</time>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>[中]董晓萍丨第二节 民俗叙事与佛典文学</span>
+                                        <time>2016-12-11</time>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>[中]李正荣丨第二节 “伟大的水道”——古罗斯的文化选择（二）</span>
+                                        <time>2016-11-11</time>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>[中]李正荣丨第一节 “伟大的水道”——古罗斯的文化选择（一）</span>
+                                        <time>2016-10-24</time>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    <div id="index-conference-list" class="panel panel-default">
+                        <div class="panel-header">
+                            <h4>学术会议</h4>
+                            <a href="#">更多>></a>
+                        </div>
+                        <div class="panel-body">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <span>英国皇家学术院院士白馥兰教授获授北京师范大学荣誉教授称号</span>
+                                        <time>2017-06-12</time>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>2016年世界孔子学院日（法国阿尔多瓦大学禅音乐会）</span>
+                                        <time>2017-06-10</time>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>北京师范大学授予白乐桑教授客座教授荣誉职衔仪式隆重举行</span>
+                                        <time>2017-05-23</time>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>跨文化对话与我国文化软实力发展战略研究成果座谈会在北师大成功召开</span>
+                                        <time>2017-02-04</time>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>英国皇家学术院院士白馥兰教授获授北京师范大学荣誉教授称号</span>
+                                        <time>2017-06-12</time>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>2016年世界孔子学院日（法国阿尔多瓦大学禅音乐会）</span>
+                                        <time>2017-06-10</time>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>北京师范大学授予白乐桑教授客座教授荣誉职衔仪式隆重举行</span>
+                                        <time>2017-05-23</time>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>跨文化对话与我国文化软实力发展战略研究成果座谈会在北师大成功召开</span>
+                                        <time>2017-02-04</time>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    <div id="index-latest-list" class="panel panel-default">
+                        <div class="panel-header">
+                            <h4>最新动态</h4>
+                            <a href="#">更多>></a>
+                        </div>
+                        <div class="panel-body">
+                            <ul>
+                                <li>
+                                    <a href="#">2018年北师大跨文化学研究生招生专业目录</a>
+                                    <time>
+                                        <span>Nov</span>
+                                        <span>01</span>
+                                    </time>
+                                </li>
+                                <li>
+                                    <a href="#">9月20日工作简报丨董晓萍教授讲授第四节</a>
+                                    <time>
+                                        <span>Dec</span>
+                                        <span>21</span>
+                                    </time>
+                                </li>
+                                <li>
+                                    <a href="#">9月19日工作简报丨董晓萍教授讲授第三节</a>
+                                    <time>
+                                        <span>Oct</span>
+                                        <span>25</span>
+                                    </time>
+                                </li>
+                                <li>
+                                    <a href="#">9月18日工作简报丨中国科学院科学技术史大讲堂走进北师大校园</a>
+                                    <time>
+                                        <span>May</span>
+                                        <span>12</span>
+                                    </time>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row cl">
+                <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    <div id="vedio-slider" class="panel panel-default">
+                        <div class="panel-header">
+                            <h4>数字对话视频</h4>
+                            <a href="#">更多>></a>
+                        </div>
+                        <div class="panel-body">
+                            <div class="slider">
+                                <div class="bd">
+                                    <ul>
+                                        <li>
+                                            <div class="maskWraper">
+                                                <a href="#">
+                                                    <img src="http://psych.bnu.edu.cn/Portals/0/NewsArticle/ImageFile/375/6e5b39af-6bc8-44ce-8f70-4fce501e117f.jpg">
+                                                    <div class="maskBar text-l">汤一介、汪德迈谈中西文化的互补性</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="maskWraper">
+                                                <a href="#">
+                                                    <img src="http://psych.bnu.edu.cn/Portals/0/NewsArticle/ImageFile/375/bd7836b7-bdae-45a5-9bd6-1b2a326040aa.jpg">
+                                                    <div class="maskBar text-l">汤一介：启蒙在中国的艰难历程</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <ol class="hd cl dots">
+                                    <li>1</li>
+                                    <li>2</li>
+                                </ol>
                             </div>
-                            <a href="javascript:void(0)" class="next"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                    <div id="book-rollpic" class="panel panel-default">
+                        <div class="panel-header">
+                            <h4>学术新著</h4>
+                            <a href="#">更多>></a>
+                        </div>
+                        <div class="panel-body text-c">
+                            <div class="rollpic cl">
+                                <a href="javascript:void(0)" class="prev hidden-xs"><i class="fa fa-chevron-left"></i></a>
+                                <div class="rollpicshow">
+                                    <ul>
+                                        <li>
+                                            <div class="maskWraper">
+                                                <a href="#">
+                                                    <img src="http://bnudfsl.cn/UserFiles/Image/%E7%8E%8B%E9%82%A6%E7%BB%B4%E3%80%8A%E8%B7%A8%E6%96%87%E5%8C%96%E7%9A%84%E6%83%B3%E8%B1%A1%EF%BC%9A%E6%96%87%E7%8C%AE%E3%80%81%E7%A5%9E%E8%AF%9D%E4%B8%8E%E5%8E%86%E5%8F%B2%E3%80%8B.jpg">
+                                                    <div class="maskBar text-c">[中]王邦维《跨文化的想象》</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="maskWraper">
+                                                <a href="#">
+                                                    <img src="http://bnudfsl.cn/UserFiles/Image/%E7%8E%8B%E9%82%A6%E7%BB%B4%E3%80%8A%E8%B7%A8%E6%96%87%E5%8C%96%E7%9A%84%E6%83%B3%E8%B1%A1%EF%BC%9A%E6%96%87%E7%8C%AE%E3%80%81%E7%A5%9E%E8%AF%9D%E4%B8%8E%E5%8E%86%E5%8F%B2%E3%80%8B.jpg">
+                                                    <div class="maskBar text-c">[中]王一川《跨文化艺术美学》</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="maskWraper">
+                                                <a href="#">
+                                                    <img src="http://bnudfsl.cn/UserFiles/Image/%E7%8E%8B%E9%82%A6%E7%BB%B4%E3%80%8A%E8%B7%A8%E6%96%87%E5%8C%96%E7%9A%84%E6%83%B3%E8%B1%A1%EF%BC%9A%E6%96%87%E7%8C%AE%E3%80%81%E7%A5%9E%E8%AF%9D%E4%B8%8E%E5%8E%86%E5%8F%B2%E3%80%8B.jpg">
+                                                    <div class="maskBar text-c">[中]董晓萍《跨文化民俗学》</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="maskWraper">
+                                                <a href="#">
+                                                    <img src="http://bnudfsl.cn/UserFiles/Image/%E7%8E%8B%E9%82%A6%E7%BB%B4%E3%80%8A%E8%B7%A8%E6%96%87%E5%8C%96%E7%9A%84%E6%83%B3%E8%B1%A1%EF%BC%9A%E6%96%87%E7%8C%AE%E3%80%81%E7%A5%9E%E8%AF%9D%E4%B8%8E%E5%8E%86%E5%8F%B2%E3%80%8B.jpg">
+                                                    <div class="maskBar text-c">[中]董晓萍等《跨文化民俗志》</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="maskWraper">
+                                                <a href="#">
+                                                    <img src="http://bnudfsl.cn/UserFiles/Image/%E7%8E%8B%E9%82%A6%E7%BB%B4%E3%80%8A%E8%B7%A8%E6%96%87%E5%8C%96%E7%9A%84%E6%83%B3%E8%B1%A1%EF%BC%9A%E6%96%87%E7%8C%AE%E3%80%81%E7%A5%9E%E8%AF%9D%E4%B8%8E%E5%8E%86%E5%8F%B2%E3%80%8B.jpg">
+                                                    <div class="maskBar text-c">[中]董晓萍《钟敬文与中国民俗学派》</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="maskWraper">
+                                                <a href="#">
+                                                    <img src="http://bnudfsl.cn/UserFiles/Image/%E7%8E%8B%E9%82%A6%E7%BB%B4%E3%80%8A%E8%B7%A8%E6%96%87%E5%8C%96%E7%9A%84%E6%83%B3%E8%B1%A1%EF%BC%9A%E6%96%87%E7%8C%AE%E3%80%81%E7%A5%9E%E8%AF%9D%E4%B8%8E%E5%8E%86%E5%8F%B2%E3%80%8B.jpg">
+                                                    <div class="maskBar text-c">[爱]于鲁·瓦尔克《信仰 体裁 社会》</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="maskWraper">
+                                                <a href="#">
+                                                    <img src="http://bnudfsl.cn/UserFiles/Image/%E7%8E%8B%E9%82%A6%E7%BB%B4%E3%80%8A%E8%B7%A8%E6%96%87%E5%8C%96%E7%9A%84%E6%83%B3%E8%B1%A1%EF%BC%9A%E6%96%87%E7%8C%AE%E3%80%81%E7%A5%9E%E8%AF%9D%E4%B8%8E%E5%8E%86%E5%8F%B2%E3%80%8B.jpg">
+                                                    <div class="maskBar text-c">[法]劳格文等《中国客家地方社会研究》</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="javascript:void(0)" class="next hidden-xs"><i class="fa fa-chevron-right"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -242,7 +484,13 @@
     <footer class="footer mt-20">
         <div class="container-fluid">
             <p>
-                北京师范大学中国民间文化研究所、北京师范大学数字民俗学实验室版权所有<br>
+                友情链接：
+                <a href="http://www.bnu.edu.cn/" target="_blank">北京师范大学</a> |
+                <a href="http://mdw.bnu.edu.cn/main.action" target="_blank">北师大民俗典籍文字研究中心</a> |
+                <a href="http://wxy.bnu.edu.cn/" target="_blank">北师大文学院</a> |
+                <a href="http://pkujccs.cn/" target="_blank">跨文化对话</a> |
+                <a href="http://www.dunhefoundation.org/" target="_blank">敦和基金会</a><br>
+                版权所有：北京师范大学中国民间文化研究所、北京师范大学数字民俗学实验室<br>
                 北京市海淀区新街口外大街19号<span class="pipe">|</span>100875<br>
                 <a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">工信部ICP备案号：京ICP备10031106号-32</a><br>
             </p>

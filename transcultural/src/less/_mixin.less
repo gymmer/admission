@@ -6,22 +6,14 @@
     text-overflow: ellipsis;
 }
 
-// 字体
-@base-font: Helvetica, Arial, sans-serif;
-.font-family() {
-    font-family: @base-font;
-}
-
-.font-family(hei) {
-    font-family: 'simhei', '黑体', @base-font;
-}
-
-.font-family(yahei) {
-    font-family: 'Microsoft Yahei', '微软雅黑', @base-font;
-}
-
-.font-family(awesome) {
-    font-family: FontAwesome;
+// 最多显示2行，超过部分用省略号代替
+.ellipsis-2(@w) {
+	width: @w;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 // 清除浮动

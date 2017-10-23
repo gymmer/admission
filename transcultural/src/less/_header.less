@@ -1,0 +1,48 @@
+@import "_variables";
+
+#primary-header {
+    padding : 25px 0 15px 0;
+    background-color: #efefef;
+    font-family: @font-simhei;
+    border-bottom: 8px solid @yellow;
+
+    .col-lg-2 {
+        text-align: center;
+    }
+
+    .logo {
+        @logo-size: 70px;
+        width: @logo-size;
+        height: @logo-size;
+        cursor: auto;
+
+        &:first-child {
+            margin-right: 15px;
+        }
+    }
+
+    h1 {
+        display: inline-block;
+        border-bottom: 1px solid #e3e3e3;
+        font-size: 30px;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 8px;
+        margin-bottom: 12px;
+    }
+
+    h3 {
+        font-size: 18px;
+        margin: 0;
+        padding: 0;
+        padding-left: 28px;
+        font-family: @font-geo;
+    }
+}
+
+#primary-nav {
+    .navbar {
+        background-color: darken(@blue, 15%);
+        border-bottom-color: darken(@blue, 10%);
+    }
+}
