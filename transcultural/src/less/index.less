@@ -1,6 +1,7 @@
 @import "_mixin";
 @import "_variables";
 @import "_header";
+@import "_footer";
 @import "components/_slider";
 @import "components/_rollpic";
 @import "components/_calendar-card";
@@ -9,6 +10,11 @@ body {
     font-family: @font-yahei;
     font-size: 14px;
     box-sizing: border-box;
+}
+
+a:hover {
+    color: @yellow;
+    text-decoration: none;
 }
 
 #index-slider {
@@ -71,7 +77,14 @@ body {
 #index-conference-list {
     span {
         display: inline-block;
-        .ellipsis(80%);
+        .ellipsis(74%);
+
+        &:before {
+            font-family: @font-awesome;
+            content: "\f0da";
+            color: @yellow;
+            margin-right: 6px;
+        }
     }
 
     time {
@@ -103,9 +116,6 @@ body {
             top: 0;
             padding-left: 10px;
             .ellipsis-2(80%);
-            &:hover {
-                text-decoration: none;
-            }
         }
         // 时间
         time {
@@ -115,6 +125,9 @@ body {
             top: 0;
             .calendar-card(@time-w, @h, @dark-color, @light-color);
         }
+    }
+    a:hover {
+        color: @yellow;
     }
 }
 
@@ -140,7 +153,6 @@ body {
             color: @yellow;
             font-size: 12px;
             &:hover {
-                text-decoration: none;
                 color: darken(@yellow, 10%);
             }
         }
