@@ -26,7 +26,7 @@ jQuery(function($) {
     });
 
     // 视频轮播图
-    $("#vedio-slider .slider").slide({
+    $("#index-vedio-list .slider").slide({
         mainCell: ".bd ul",
         titCell: ".hd li",
         trigger: "click",
@@ -38,8 +38,8 @@ jQuery(function($) {
         titOnClassName: "active"
     });
 
-    // 滚动图片
-    $(".rollpicshow").jCarouselLite({
+    // 滚动书目图片
+    $("#index-book-list .rollpicshow").jCarouselLite({
 		auto: 2000,         // 自动播放间隔时间
 		speed: 500,         // 速度
 		btnNext: ".next",   // 向前滚动

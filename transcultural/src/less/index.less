@@ -1,34 +1,25 @@
-@import "_mixin";
 @import "_variables";
+@import "_mixin";
+@import "_global";
 @import "_header";
 @import "_footer";
 @import "components/_slider";
 @import "components/_rollpic";
 @import "components/_calendar-card";
 
-body {
-    font-family: @font-yahei;
-    font-size: 14px;
-    box-sizing: border-box;
-}
-
-a:hover {
-    color: @yellow;
-    text-decoration: none;
-}
-
 #index-slider {
     .thumbnail-slider();
 }
 
-#vedio-slider {
+#index-vedio-list {
     .indicator-slider();
 }
 
-#book-rollpic {
+#index-book-list {
     .rollpic();
 }
 
+// 上下滚动的通知
 #index-notice {
     background-color: #efefef;
     // 标题
@@ -73,8 +64,28 @@ a:hover {
     }
 }
 
+#index-group-list {
+    li {
+        @height: 50px;
+        width: 50%;
+        float: left;
+        height: @height;
+        line-height: @height;
+    }
+    a {
+        font-weight: bold;
+        font-size: 16px;
+    }
+    i.fa {
+        margin-right: 15px;
+        font-weight: lighter;
+        color: darken(@blue, 10%);
+    }
+}
+
+// 纯文字列表
 #index-course-list,
-#index-conference-list {
+#index-change-list {
     span {
         display: inline-block;
         .ellipsis(74%);
@@ -95,7 +106,8 @@ a:hover {
     }
 }
 
-#index-latest-list {
+// 突出时间的列表
+#index-conference-list {
     @h: 46px;
     @time-w: 60px;
     @dark-color: darken(@blue, 15%);
@@ -128,6 +140,51 @@ a:hover {
     }
     a:hover {
         color: @yellow;
+    }
+}
+
+// 左侧图片、右侧文字的列表
+#index-magazine-list,
+#index-bridge-list {
+    li {
+        margin-bottom: 9px;
+
+        // 文字
+        p {
+            margin: 0;
+            padding: 0;
+            margin-top: 1px;
+            padding-top: 1px;
+            border-top: 1px solid #eee;
+        }
+        // 图片
+        .img-container {
+            width: 100%;
+            height: 70px;
+            overflow: hidden;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            transition:transform 200ms;
+        }
+        // 时间
+        time {
+            font-family: @font-geo;
+            font-size: 13px;
+            color: #888;
+            &:before {
+                font-family: @font-awesome;
+                content: "\f017";
+                margin-right: 10px;
+            }
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.02);
+            }
+        }
     }
 }
 
