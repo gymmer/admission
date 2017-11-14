@@ -19,3 +19,34 @@ a:hover {
 @media ( min-width : 1400px) {
 	.container {width: 1170px}
 }
+
+.panel {
+    border: none;
+
+    h4 {
+        border-left: 5px solid @yellow;
+        padding-left: 15px;
+        font-size: 16px;
+        color: darken(@blue, 10%);
+        font-weight: bold;
+        font-family: @base-font;
+    }
+    .panel-header {
+        position: relative;
+        background-color: #fff;
+
+        a {
+            position: absolute;
+            top: 20px;
+            right: 15px;
+            color: @yellow;
+            font-size: 12px;
+            &:hover {
+                color: darken(@yellow, 10%);
+            }
+        }
+    }
+    .panel-body {
+        min-height: 230px;
+    }
+}

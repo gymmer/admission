@@ -42,7 +42,16 @@
         border-bottom-color: darken(@blue, 10%);
     }
 
+    .navbar-nav.nav-collapse {
+        max-height: 9999px !important;
+        overflow: visible;
+    }
+
     .dropDown-menu.menu {
         opacity: 0.9;
+    }
+
+    li.dropDown.open > ul{
+        display: block;
     }
 }

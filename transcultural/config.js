@@ -16,7 +16,7 @@ let config = {
         dist:  path.resolve(dist)
     },
     less: {
-        src:   path.resolve(src,  'less/index.less'),
+        src:   [path.resolve(src,  'less/index.less'),path.resolve(src,  'less/style.less')] ,
         watch: path.resolve(src,  'less/**/*.less'),
         dist:  path.resolve(dist, 'css')
     },
