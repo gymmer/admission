@@ -164,3 +164,231 @@
         .no-anotherline(100%);
     }
 }
+
+// ====================================
+// 列表页
+// ====================================
+#list-page {
+    padding: 50px 80px 50px 40px;
+    .page-head {
+        .relative();
+        // 栏目名称
+        h2 {
+            .reset();
+            font-size: 1.8em;
+            font-weight: bold;
+            border-bottom: 2px solid @base-color;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        // 当前路径
+        .currpath {
+            .absolute(rb, 5px, 0px);
+            a:hover,a:link {
+                text-decoration: none;
+            }
+            a:after {
+                content: ' >> ';
+            }
+            a:last-child:after {
+                content: '';
+            }
+        }
+    }
+    .page-body {
+        ul {
+            .reset(ul);
+            padding-right: 50px;
+        }
+        li {
+            border-bottom: 1px dotted #ccc;
+            &:last-child {
+                padding-bottom: 0;
+                border-bottom: 0;
+            }
+        }
+        // 文章列表
+        .news-list{
+            li {
+                .relative();
+                padding-bottom: 5px;
+                margin-bottom: 13px;
+            }
+            a {
+                .no-anotherline(75%);
+                display: block;
+                color: #333;
+                &:hover {
+                    color: @base-color;
+                }
+            }
+            time {
+                color: #333;
+                .absolute(rb, 0, 0);
+            }
+        }
+        // 多媒体列表
+        .media-list {
+            padding-top: 10px;
+            li {
+                padding-bottom: 20px;
+                margin-bottom: 30px;
+            }
+            img {
+                display: block;
+                height: auto;
+                width: 100%;
+                max-width: 200px;
+                margin: 0 auto;
+                .transition(box-shadow, fast);
+                &:hover {
+                    zoom: 1.01;
+                    .box-shadow(0,0,10px,rgba(0,0,0,0.2));
+                }
+            }
+            h4 {
+                .reset();
+                color: #000;
+                font-size: 1.3em;
+                margin: 5px 0 15px 0;
+                text-align: center;
+            }
+            p {
+                color: #555;
+                text-indent: 2em;
+            }
+        }
+    }
+    .page-foot {
+        // 分页
+        .relative();
+        border-top: 1px solid @base-color;
+        padding-top: 25px;
+        .button() {
+            display: inline-block;
+            height: 32px;
+            line-height: 32px;
+            padding: 0 8px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            margin-right: 15px;
+            color: #666;
+            cursor: pointer;
+            .transition(background-color, fast);
+            .border-radius(4px);
+            &:hover {
+                background-color: #ccc;
+                color: #000;
+                text-decoration: none;
+            }
+        }
+        .page-navigation {
+            text-align: center;
+            a {
+                .button();
+                &:link {
+                    text-decoration: none;
+                }
+            }
+            select {
+                .button();
+            }
+        }
+        .page-info {
+            .absolute(rt, 0, 2px);
+            span {
+                margin-right: 10px;
+                color: #666;
+            }
+        }
+    }
+}
+
+// ====================================
+// 文章页
+// ====================================
+#article-page {
+    padding: 50px 80px 50px 40px;
+    .page-head {
+        // 文章标题
+        h2 {
+            .reset();
+            font-size: 1.8em;
+            font-weight: bold;
+            border-top: 2px solid @base-color;
+            padding-top: 20px;
+            margin: 5px 0 15px 0;
+            text-align: center;
+        }
+        // 当前路径
+        .currpath {
+            color: #666;
+            a {
+                color: #666;
+            }
+            a:hover,a:link {
+                color: @base-color;
+                text-decoration: none;
+            }
+            a:after {
+                content: ' >> ';
+            }
+            a:last-child:after {
+                content: '';
+            }
+        }
+        // 文章附加信息
+        ul {
+            .reset(ul);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        li {
+            display: inline-block;
+            margin-right: 30px;
+            color: #999;
+            font-size: 0.9em;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    .page-body {
+        line-height: 2em;
+        border-bottom: 1px solid @base-color;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    .page-foot {
+        .page-attachment {
+            .font-family(hei);
+            margin-bottom: 30px;
+            h4 {
+                color: @base-color;
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+            ul {
+                .reset(ul);
+            }
+            a {
+                color: #333;
+                line-height: 1.8em;
+                &:hover {
+                    color: @base-color;
+                }
+                &:link {
+                    text-decoration: none;
+                }
+            }
+        }
+        .page-neighbor {
+            .reset(ul);
+            li {
+                .no-anotherline(50%);
+                margin-bottom: 5px;
+                font-size: 0.9em;
+            }
+        }
+    }
+}

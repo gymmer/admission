@@ -47,7 +47,8 @@ i.fa {
     margin-right: 1em;
 }
 
-/* 重置ul、ol的样式*/
+
+/* 重置样式*/
 
 ul.reset,
 ol.reset {
@@ -60,6 +61,12 @@ ol.reset {
     border: 0;
 }
 
+.reset {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+}
+
 
 /* 头部<header>
  * =======================================================
@@ -68,6 +75,7 @@ ol.reset {
 header {
     position: fixed;
     z-index: 999;
+    top: 0;
     width: 100%;
     height: 110px;
     opacity: .9;
@@ -75,7 +83,9 @@ header {
 }
 
 main {
-    padding-top: 110px;
+    margin-top: 110px;
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 
 
@@ -118,6 +128,13 @@ nav#primary-nav ul > li:nth-child(7) > a {
 nav#primary-nav ul > li > a:hover,
 nav#primary-nav a.current {
     color: #014da1;
+}
+
+nav#primary-nav ul > li > a:visited,
+nav#primary-nav ul > li > a:active,
+nav#primary-nav ul > li > a:hover,
+nav#primary-nav ul > li > a:link {
+    text-decoration: none;
 }
 
 
@@ -167,7 +184,7 @@ nav#primary-nav .dynamic-bottom {
         height: 140px;
     }
     main {
-        padding-top: 140px;
+        margin-top: 140px;
     }
     nav#primary-nav {
         background: url(../img/bnulog.jpg) no-repeat center top;
@@ -186,7 +203,7 @@ nav#primary-nav .dynamic-bottom {
         height: auto;
     }
     main {
-        padding-top: 0;
+        margin-top: 0;
     }
     nav#primary-nav {
         display: none;
@@ -591,60 +608,60 @@ nav#primary-nav .dynamic-bottom {
     color: #014da1;
 }
 
-.special-stu li:nth-child(1) > a {
-    background-position: center -381px;
-}
-
-.special-stu li:nth-child(1) > a:hover {
-    background-position: center -420px;
-}
-
-.special-stu li:nth-child(2) > a {
-    background-position: center -466px;
-}
-
-.special-stu li:nth-child(2) > a:hover {
-    background-position: center -506px;
-}
-
-.special-stu li:nth-child(3) > a {
-    background-position: center -548px;
-}
-
-.special-stu li:nth-child(3) > a:hover {
-    background-position: center -583px;
-}
-
-.special-stu li:nth-child(4) > a {
-    background-position: center -624px;
-}
-
-.special-stu li:nth-child(4) > a:hover {
-    background-position: center -662px;
-}
-
-.special-stu li:nth-child(5) > a {
-    background-position: center -711px;
-}
-
-.special-stu li:nth-child(5) > a:hover {
-    background-position: center -754px;
-}
-
-.special-stu li:nth-child(6) > a {
-    background-position: center -800px;
-}
-
-.special-stu li:nth-child(6) > a:hover {
-    background-position: center -838px;
-}
-
 .special-stu li:nth-child(7) > a {
-    background-position: center -1036px;
+    background-position: center 0px;
 }
 
 .special-stu li:nth-child(7) > a:hover {
-    background-position: center -1074px;
+    background-position: center -53px;
+}
+
+.special-stu li:nth-child(2) > a {
+    background-position: center -106px;
+}
+
+.special-stu li:nth-child(2) > a:hover {
+    background-position: center -159px;
+}
+
+.special-stu li:nth-child(6) > a {
+    background-position: center -214px;
+}
+
+.special-stu li:nth-child(6) > a:hover {
+    background-position: center -268px;
+}
+
+.special-stu li:nth-child(1) > a {
+    background-position: center -320px;
+}
+
+.special-stu li:nth-child(1) > a:hover {
+    background-position: center -373px;
+}
+
+.special-stu li:nth-child(5) > a {
+    background-position: center -426px;
+}
+
+.special-stu li:nth-child(5) > a:hover {
+    background-position: center -480px;
+}
+
+.special-stu li:nth-child(3) > a {
+    background-position: center -536px;
+}
+
+.special-stu li:nth-child(3) > a:hover {
+    background-position: center -590px;
+}
+
+.special-stu li:nth-child(4) > a {
+    background-position: center -641px;
+}
+
+.special-stu li:nth-child(4) > a:hover {
+    background-position: center -694px;
 }
 
 .special-stu li > a > span {
@@ -667,6 +684,7 @@ footer {
 footer h3 {
     font-size: 1.2em;
     margin: 40px 0 20px 0;
+    letter-spacing: .2em;
     color: #eee;
 }
 
@@ -681,4 +699,291 @@ footer ul > li > a {
 
 footer ul > li > a:hover {
     color: #4a848b;
+}
+
+
+/* 页面 
+ * =======================================================
+ */
+
+
+/* 页面布局 */
+
+.page {
+    margin: 100px 0 50px 0;
+    padding: 20px 40px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    -o-box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    -ms-box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+@media screen and (max-width: 700px) {
+    .page{
+        margin-top: 30px;
+    }
+}
+.page-head {
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.page-body {
+    margin: 20px 0 30px 0;
+}
+
+.page-foot {
+    margin: 30px 0;
+}
+
+
+/* 标题 */
+
+.page-title {
+    font-family: 'simhei', '黑体', Helvetica, Arial, sans-serif;
+    letter-spacing: .2em;
+}
+
+
+/* 当前路径 */
+
+.page-currpath a {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: .9em;
+    padding: 0 10px;
+    color: #666;
+    border-right: 1px solid #ccc;
+}
+
+.page-currpath a:first-child {
+    padding-left: 0;
+}
+
+.page-currpath a:last-child {
+    padding-right: 0;
+    border-right: 0;
+}
+
+.page-currpath a:hover {
+    text-decoration: underline;
+    color: #014da1;
+}
+
+
+/* 页面信息：发布时间、浏览次数等 */
+
+ul.page-des {
+    font-size: .8em;
+    color: #888;
+    text-align: center;
+}
+
+.page-des li {
+    display: inline-block;
+    margin-right: 40px;
+}
+
+.page-des li:last-child {
+    margin-right: 0;
+}
+
+.page-des a {
+    color: #888;
+}
+
+.page-des a:hover {
+    color: #014da1;
+}
+
+
+/* 分页导航 */
+.page-info,
+.page-navigation{
+    display: inline-block;
+    width: 49%;
+}
+.page-info {
+    letter-spacing: .05em;
+    color: #999;
+    text-align: left;
+}
+
+.page-navigation {
+    text-align: right;
+}
+
+.page-navigation a {
+    color: #f00;
+}
+
+.page-navigation a:hover {
+    color: #014da1;
+}
+
+.page-info span,
+.page-navigation a {
+    display: inline-block;
+    font-size: .9em;
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 992px){
+    .page-info,
+    .page-navigation {
+        text-align: center;
+        width: 100%;
+    }
+    .page-info span,
+    .page-navigation a {
+        margin-right: 10px;
+    }
+}
+
+/*上一篇、下一篇*/
+
+ul.page-neighbor {
+    margin-top: 30px;
+}
+
+.page-neighbor li {
+    display: inline-block;
+    width: 49%;
+}
+
+.page-neighbor .prev-neighbor {
+    text-align: left;
+}
+
+.page-neighbor .next-neighbor {
+    text-align: right;
+}
+
+.page-neighbor a {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: 'simhei', '黑体', Helvetica, Arial, sans-serif;
+    font-size: 0.9em;
+    color: #014da1;
+}
+
+.page-neighbor a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 700px) {
+    .page-neighbor li {
+        display: inline-block;
+        width: 100%;
+    }
+    .page-neighbor .next-neighbor {
+        text-align: left;
+    }
+}
+
+
+/* 附件下载 */
+
+.page-attachment {
+    margin-bottom: 30px;
+}
+
+.page-attachment h4 {
+    font-family: 'simhei', '黑体', Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    padding-top: 15px;
+    letter-spacing: .1em;
+    color: #f00;
+}
+
+.page-attachment li {
+    height: 25px;
+}
+
+.page-attachment a {
+    font-size: .9em;
+    color: #555;
+}
+
+.page-attachment a:hover {
+    text-decoration: underline;
+    color: #014da1;
+}
+
+
+/* list页面 */
+
+.listpage .page-currpath {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+
+.listpage .bule-block {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    display: block;
+    width: 130px;
+    height: 4px;
+    margin: 0;
+    padding: 0;
+    background-color: #014da1;
+}
+
+.page-article-list li {
+    clear: both;
+    height: 50px;
+    border-bottom: 1px #ccc dotted;
+}
+
+.page-article-list li:hover time {
+    color: #0106a1;
+}
+
+.page-article-list a,
+.page-article-list time {
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 50px;
+    display: block;
+    float: left;
+}
+
+.page-article-list a {
+    font-size: 1.1em;
+    overflow: hidden;
+    width: 80%;
+    white-space: nowrap;
+    letter-spacing: .05em;
+    text-overflow: ellipsis;
+    color: #333;
+}
+
+.page-article-list a:hover {
+    color: #014da1;
+}
+
+.page-article-list time {
+    font-size: .9em;
+    width: 20%;
+    text-align: right;
+    color: #777;
+}
+
+
+/* article 页面 */
+
+.artilepage .page-title {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.artilepage .page-foot {
+    border-top: 1px dotted #ccc;
 }
