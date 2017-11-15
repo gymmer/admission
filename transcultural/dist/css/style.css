@@ -189,6 +189,13 @@ a:hover {
   font-family: Georgia, Helvetica, Arial, sans-serif;
   border: none;
 }
+.channel-info .breadcrumb a:after {
+  content: ' >';
+  color: #333;
+}
+.channel-info .breadcrumb a:last-child:after {
+  content: '';
+}
 .article-list li > a {
   display: block;
   position: relative;

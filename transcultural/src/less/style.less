@@ -79,6 +79,14 @@
         bottom: 5px;
         font-family: @font-geo;
         border: none;
+
+        a:after {
+            content: ' >';
+            color: #333;
+        }
+        a:last-child:after {
+            content: '';
+        }
     }
 }
 
