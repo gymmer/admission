@@ -1,0 +1,376 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+ * CSS for Page
+ * Author: Gao Yan
+ * Time: 2017/11/21
+ */
+
+/* 通用 */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 16px;
+	font-family: Arial, sans-serif;
+	color: #333;
+	background: url(../img/body-bg.jpg);
+}
+
+a {
+	color: #233B8A;
+	text-decoration: none;
+}
+
+a:hover {
+    color: #FF6600;
+    text-decoration: none;
+}
+
+.strong {
+	font-weight: bold;
+}
+
+.clearfix {
+	clear: both;
+	height: 0;
+	overflow: hidden;
+}
+
+/* 页面 */
+.page-wrapper {
+	width: 1170px;
+	min-height: 300px;
+	height: auto;
+	margin: 30px auto;
+	box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.40);
+	border: 1px solid #ccc;
+}
+
+/* 头部 */
+.page-header {
+	background: url(../img/banner.jpg);
+	position: relative;
+	height: 180px;
+	width: 100%;
+}
+
+.page-header h1 {
+	font-weight: bold;
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 30px;
+}
+
+.page-header p {
+    text-align: center;
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.mask {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+/* 导航栏 */
+.page-nav {
+	background-color: #ddd;
+}
+
+.page-nav ul {
+	height: 45px;
+	line-height: 45px;
+}
+
+.page-nav li {
+	width: 194px;	/* (1170-2)/6 */
+	height: 100%;
+	float: left;
+	background-color: #ddd;
+	transition: all 400ms;
+}
+
+.page-nav li:hover {
+	background-color: #bbb;
+}
+
+.page-nav a {
+	display: block;
+	text-align: center;
+	color: #333;
+	font-family: Georgia, Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+/* 侧边栏 */
+.page-aside {
+	width: 250px;
+	float: left;
+	padding: 20px;
+	text-align: center;
+}
+
+.page-aside .aside-box {
+	margin-bottom: 35px;
+}
+
+.page-aside .aside-box h3 {
+	position: relative;
+	font-family: Georgia, Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	color: #FF6600;
+	height: 20px;
+	margin-bottom: 12px;
+}
+
+.page-aside .aside-box h3:before,
+.page-aside .aside-box h3:after {
+	position: absolute;
+	top: 10px;
+	display: block;
+	content: ' ';
+	height: 1px;
+	background-color: #ddd;
+	width: 60px;
+}
+
+.page-aside .aside-box h3:before {
+	left: 0;
+}
+
+.page-aside .aside-box h3:after {
+	right: 0;
+}
+
+.page-aside .link-list li {
+	height: 30px;
+	line-height: 30px;
+}
+
+.page-aside .img-list li {
+	margin-bottom: 12px;
+}
+
+.page-aside .img-list img {
+	background: #fff;
+	padding: 1px;
+	border: 1px solid #ccc;
+	width: 100%;
+	height: auto;
+}
+
+/* 正文 */
+.page-content {
+	float: left;
+	width: 918px;  /*1170-2-250*/
+	background-color: #fff;
+	padding: 30px 40px;
+}
+
+.box {
+	margin-bottom: 0;
+}
+
+.box-header {
+	position: relative;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	font-family: Georgia, Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	color: #000;
+	margin-bottom: 10px;
+}
+
+.box-header:before,
+.box-header:after {
+	position: absolute;
+	top: 12px;
+	display: block;
+	content: ' ';
+	height: 1px;
+	background-color: #ccc;
+	width: 310px;
+}
+
+.box-header:before {
+	left: 0;
+}
+
+.box-header:after {
+	right: 0;
+}
+
+.panel-header {
+	font-size: 18px;
+	font-weight: bold;
+	color: #2D4396;
+	margin-bottom: 15px;
+}
+
+.panel-header .fa {
+	margin-right: 10px;
+}
+
+.panel-body {
+	margin-bottom: 25px;
+}
+
+.panel-body h2 {
+	font-family: Georgia, Helvetica, Arial, sans-serif;
+	font-size: 19px;
+	font-weight: 600;
+	color: #000;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.panel-body p {
+	text-indent: 25px;
+	margin-bottom: 10px;
+	line-height: 24px;
+	text-align: justify;
+}
+
+.panel-body dl,
+.panel-body ul,
+.panel-body ol {
+	padding-left: 25px;
+}
+
+.panel-body li {
+	margin-bottom: 10px;
+	padding-bottom: 8px;
+	border-bottom: 1px dashed #eee;
+	list-style: none;
+}
+
+.panel-body dl dt {
+	display: inline-block;
+	width: 140px;
+	margin-right: 10px;
+	font-weight: bold;
+}
+
+.panel-body dl dd {
+	display: inline-block;
+}
+
+.panel-body img {
+	max-width: 100%;
+	height: auto;
+}
+
+.panel-body .publish-time {
+	text-align: center;
+	font-family: Georgia, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #666;
+	margin-bottom: 15px;
+}
+
+.item-list li:before {
+	content: ' ';
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	margin-right: 12px;
+	background: url(../img/triangle.jpg) no-repeat left center;
+}
+
+.item-list a{
+	color: #333;
+}
+
+.item-list a:hover {
+	color: #FF6600;
+}
+
+.item-list .time {
+	float: right;
+	font-family: Georgia, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
+
+/* 页脚 */
+.page-footer {
+	padding: 15px 0;
+	background-color: #333;
+	text-align: center;
+	color: #fff;
+	font-size: 13px;
+	line-height: 20px;
+}
+
+/* 返回顶部 */
+.go-to-top {
+    position: fixed;
+    right: 25px;
+    bottom: 60px;
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/up.png);
+}
+
+.go-to-top:hover {
+    background-image: url(../img/up_hover.png);
+}
