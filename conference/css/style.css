@@ -97,27 +97,19 @@ a:hover {
 
 /* 头部 */
 .page-header {
-	background: url(../img/banner.jpg);
+	background: url(../img/banner.jpg) no-repeat center 0;
 	position: relative;
-	height: 180px;
+	height: 250px;
 	width: 100%;
 }
 
 .page-header h1 {
 	font-weight: bold;
-    font-size: 24px;
+    font-size: 28px;
     color: #fff;
     text-align: center;
-    padding-top: 40px;
-    margin-bottom: 30px;
-}
-
-.page-header p {
-    text-align: center;
-    color: #fff;
-    font-size: 17px;
-    font-weight: bold;
-    margin-bottom: 15px;
+    height: 250px;
+    line-height: 250px;
 }
 
 .mask {
@@ -126,45 +118,14 @@ a:hover {
 	top: 0;
 	bottom: 0;
 	right: 0;
-	background: rgba(0, 0, 0, 0.5);
-}
-
-/* 导航栏 */
-.page-nav {
-	background-color: #ddd;
-}
-
-.page-nav ul {
-	height: 45px;
-	line-height: 45px;
-}
-
-.page-nav li {
-	width: 194px;	/* (1170-2)/6 */
-	height: 100%;
-	float: left;
-	background-color: #ddd;
-	transition: all 400ms;
-}
-
-.page-nav li:hover {
-	background-color: #bbb;
-}
-
-.page-nav a {
-	display: block;
-	text-align: center;
-	color: #333;
-	font-family: Georgia, Helvetica, Arial, sans-serif;
-	font-weight: bold;
-	font-size: 15px;
+	background: rgba(0, 0, 0, 0.3);
 }
 
 /* 侧边栏 */
 .page-aside {
 	width: 250px;
 	float: left;
-	padding: 20px;
+	padding: 30px 20px 20px 20px;
 	text-align: center;
 }
 
@@ -189,7 +150,7 @@ a:hover {
 	content: ' ';
 	height: 1px;
 	background-color: #ddd;
-	width: 60px;
+	width: 40px;
 }
 
 .page-aside .aside-box h3:before {
@@ -238,7 +199,7 @@ a:hover {
 	font-weight: bold;
 	font-size: 20px;
 	color: #000;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 .box-header:before,
@@ -328,6 +289,49 @@ a:hover {
 	margin-bottom: 15px;
 }
 
+.panel-body .more {
+	text-align: right;
+	font-size: 14px;
+}
+
+/* 分页 */
+.pagination {
+	margin: 30px 0;
+    text-align: center;
+    font-family: Georgia, Helvetica, Arial, sans-serif;
+}
+
+.pagination a,
+.pagination select {
+	display: inline-block;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    margin: 0 8px 0 0;
+    cursor: pointer;
+    background-color: #fff;
+    color: #666;
+    transition: background-color, 0.2s;
+}
+
+.pagination a:hover,
+.pagination select:hover {
+	background-color: #333;
+    color: #fff;
+}
+
+.pagination select {
+	width: 70px;
+}
+
+.pagination option {
+    background-color: #fff;
+    color: #333;
+}
+
+/* 新闻列表 */
 .item-list li:before {
 	content: ' ';
 	display: inline-block;
@@ -335,6 +339,16 @@ a:hover {
 	height: 5px;
 	margin-right: 12px;
 	background: url(../img/triangle.jpg) no-repeat left center;
+}
+
+.item-list li {
+	padding: 8px;
+	background-color: #fff;
+	transition: background-color 0.2s;
+}
+
+.item-list li:hover {
+	background-color: #eee;
 }
 
 .item-list a{
@@ -349,6 +363,49 @@ a:hover {
 	float: right;
 	font-family: Georgia, Helvetica, Arial, sans-serif;
 	font-size: 14px;
+}
+
+/* 相册列表 */
+.gallery-list {
+
+}
+
+.gallery-list li {
+	float: left;
+	width: 185px;
+	margin-right: 15px;
+}
+
+.gallery-list a {
+	display: block;
+}
+
+.gallery-list img {
+	display: block;
+	width: 185px;
+	height: 102px;
+	border: 1px solid #ccc;
+	padding: 3px;
+	border-radius: 5px 5px 0 0;
+}
+
+.gallery-list .caption {
+	padding: 8px;
+	text-align: center;
+	width: 100%;
+	overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background-color: #eee;
+    border-radius: 0 0 5px 5px;
+    color: #333;
+    transition: background-color 200ms;
+    font-size: 14px;
+}
+
+.gallery-list li:hover .caption {
+	background-color: #333;
+	color: #fff;
 }
 
 /* 页脚 */
