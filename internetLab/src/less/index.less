@@ -1,0 +1,164 @@
+@import "_variables";
+@import "_mixin";
+@import "_global";
+@import "_header";
+@import "_footer";
+@import "components/_slider";
+@import "components/_calendar-card";
+
+#index-slider {
+    .thumbnail-slider();
+}
+
+// 纯文字列表
+.link-list {
+    li {
+        border-bottom: 1px dashed #e8e8e8;
+        padding: 10px 5px 4px 5px;
+        background-color: #fff;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: #f0f0f0;
+        }
+
+        &:first-child {
+            padding-top: 5px;
+        }
+    }
+    span {
+        display: inline-block;
+        .ellipsis(74%);
+
+        &:before {
+            font-family: @font-awesome;
+            content: "\f0da";
+            color: @dark-blue;
+            margin-right: 6px;
+        }
+    }
+
+    time {
+        color: #888;
+        float: right;
+        font-size: 13px;
+        font-family: @font-geo;
+    }
+}
+
+// 突出时间的列表
+.calendar-list {
+    @h: 46px;
+    @time-w: 60px;
+    @dark-color: @dark-blue;
+    @light-color: #e8e8e8;
+
+    li {
+        height: @h;
+        position: relative;
+        margin-bottom: 9px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        // 文字
+        a {
+            position: absolute;
+            left: @time-w;
+            top: 0;
+            padding-left: 10px;
+            .ellipsis-2(80%);
+        }
+        // 时间
+        time {
+            font-family: @font-geo;
+            position: absolute;
+            left: 0;
+            top: 0;
+            .calendar-card(@time-w, @h, @dark-color, @light-color);
+        }
+
+        &:hover time {
+            span:first-child {
+                background-color: darken(@dark-color,10%);
+            }
+            span:last-child {
+                background-color: darken(@light-color,10%);
+            }
+        }
+    }
+}
+
+// 左侧图片、右侧文字的列表
+.image-list {
+    li {
+        margin-bottom: 9px;
+
+        // 文字
+        p {
+            margin: 0;
+            padding: 0;
+            margin-top: 1px;
+            padding-top: 1px;
+            border-top: 1px solid #eee;
+        }
+        // 图片
+        .img-container {
+            width: 100%;
+            height: 70px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            padding: 2px;
+            border-radius: 3px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            transition: transform  0.3s ease-out;
+        }
+        // 时间
+        time {
+            font-family: @font-geo;
+            font-size: 13px;
+            color: #888;
+            &:before {
+                font-family: @font-awesome;
+                content: "\f017";
+                margin-right: 10px;
+            }
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+// 友情链接
+#friends {
+    padding: 40px 0 10px 0;
+    background-color: #F7F8FA;
+
+    h4 {
+        margin: 0;
+        padding: 0;
+        font-family: @base-font;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: @dark-blue;
+        margin-bottom: 20px;
+    }
+    
+    li {
+        display: inline-block;
+        padding: 0 30px;
+        margin-bottom: 30px;
+    }
+
+    img {
+        width: 150px;
+    }
+}

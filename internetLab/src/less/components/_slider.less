@@ -1,0 +1,61 @@
+// 轮播图
+
+// 缩略图类型
+.thumbnail-slider() {
+    width:100%;
+    text-align:center;
+    position: relative;
+    .slider {
+        position: relative;
+    }
+    // 大图
+    .bd,.bd li,.bd img {
+        width: 100%;
+        height:auto;
+    }
+
+    // 遮罩文字
+    .maskBar {
+        bottom: 0;
+        height: 40px;
+        line-height: 40px;
+        padding: 15px 0 15px 30px;
+        background-color: rgba(0,0,0,0.8);
+        font-size: 17px;
+    }
+
+    // 分页按钮
+    .pagination {
+        width: 100%;
+        position: absolute;
+        top: 40%;
+        cursor: pointer;
+
+        .prev {
+            float: left;
+            margin-left: 30px;
+        }
+        .next {
+            float: right;
+            margin-right: 30px;
+        }
+        .prev, .next {
+            @size: 40px;
+            display: inline-block;
+            width: @size;
+            height: @size;
+            line-height: @size;
+            border-radius: 50%;
+            background-color: rgba(0,0,0,0.5);
+            color: #fff;
+            text-align: center;
+            font-size: 16px;
+            font-weight: lighter;
+            transition: background-color 400ms;
+
+            &:hover {
+                background-color: rgba(0,0,0,0.8);
+            }
+        }
+    }
+}

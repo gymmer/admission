@@ -1,0 +1,51 @@
+@import "_variables";
+
+#primary-header {
+    border-top: 15px solid @dark-blue;
+    background-color: #F7F7F7;
+    
+    .logo {
+        margin-right: 15px;
+        width: auto;
+        height: 60px;
+    }
+    
+    h1 {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: 5px;
+        display: inline-block;
+        font-family: @font-simhei;
+        font-size: 30px;
+        letter-spacing: 2px;
+        color: @dark-blue;
+        text-shadow: 1px 1px 8px #333;
+    }
+
+    .primary-header-wrapper {
+        padding-top: 30px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+#primary-nav {
+    background-color: #F7F8FA;
+    .navbar {
+        background-color: #F7F7F7;
+    }
+
+    .navbar-nav.nav-collapse {
+        max-height: 9999px !important;
+        overflow: visible;
+    }
+
+    .dropDown-menu.menu {
+        opacity: 0.9;
+    }
+
+    li.dropDown.open > ul{
+        display: block;
+    }
+}

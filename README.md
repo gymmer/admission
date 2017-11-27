@@ -13,6 +13,7 @@ Some static pages when I worked as a trainee in Center Of Information & Network 
 - 经管学院MBA(mba)
 - 跨文化研究院(transcultural)
 - 文化研究院(cultureCenter)
+- 互联网实验室(internetLab)
 - 人地系统会议(conference)
 - G20中心(G20)
 - 师宏公司(shihong)

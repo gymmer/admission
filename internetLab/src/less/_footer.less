@@ -1,0 +1,51 @@
+.footer {
+    @qr-size: 80px;
+
+    background-color: darken(@dark-blue, 10%);
+    color: #ccc;
+    margin: 0;
+
+    // 二维码
+    .qrcode {
+        display: none;
+        position: absolute;
+        right: 30px;
+        bottom: -56px;
+        width: @qr-size;
+        height: @qr-size;
+        padding: 10px;
+        background-color: #FFF;
+    }
+
+    .fa-weixin {
+        position: relative;
+        cursor: pointer;
+
+        &:hover .qrcode {
+            display: block;
+        }
+    }
+
+    // 搜索框
+    button {
+        border: none;
+        background-color: @blue;
+        transition: background-color 0.2s, color 0.2s;
+        color: #ccc;
+
+        &:hover {
+            background-color: @dark-blue;
+        }
+    }
+
+    input {
+        border: none;
+        background-color: #eee;
+
+        &:hover,
+        &:focus {
+            border: none;
+            background-color: #ddd;
+        }
+    }
+}

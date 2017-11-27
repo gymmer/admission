@@ -1,0 +1,29 @@
+{
+  "name": "transcultural",
+  "version": "1.0.0",
+  "description": "College of Transcultural Studies, BNU",
+  "main": "index.js",
+  "scripts": {
+    "test":   "echo \"Error: no test specified\" && exit 1",
+    "clean":  "./node_modules/.bin/gulp clean",
+    "server": "./node_modules/.bin/gulp server",
+    "dev":    "set NODE_ENV=development && gulp",
+    "build":  "set NODE_ENV=production && gulp"
+  },
+  "keywords": [
+    "BNU"
+  ],
+  "author": "gaoyan",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-connect": "^5.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-less": "^3.3.2",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sourcemaps": "^2.6.1"
+  }
+}

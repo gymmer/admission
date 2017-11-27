@@ -1,0 +1,55 @@
+body {
+    font-family: @font-yahei;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+a:hover {
+    color: @blue;
+    text-decoration: none;
+}
+
+// 覆盖大屏幕下默认的container宽度
+@media ( min-width : 1200px) {
+	.container {width: 1170px}
+}
+@media ( min-width : 1300px) {
+	.container {width: 1170px}
+}
+@media ( min-width : 1400px) {
+	.container {width: 1170px}
+}
+
+.panel {
+    border: none;
+    margin-top: 30px;
+
+    h4 {
+        font-size: 16px;
+        font-family: @base-font;
+        letter-spacing: 1px;
+        width: 120px;
+        margin: 0;
+        padding: 10px;
+        background-color: @dark-blue;
+        color: #fff;
+        text-align: center;
+    }
+    .panel-header {
+        position: relative;
+        background-color: #fff;
+        border-bottom: 2px solid @dark-blue;
+        padding: 0;
+
+        a {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: #aaa;
+            font-size: 12px;
+            &:hover {
+                color: @blue;
+            }
+        }
+    }
+}
