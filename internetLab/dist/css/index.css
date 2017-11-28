@@ -212,20 +212,20 @@ a:hover {
 .link-list li:first-child {
   padding-top: 5px;
 }
-.link-list span {
+.link-list .title {
   display: inline-block;
   width: 74%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.link-list span:before {
+.link-list .title:before {
   font-family: FontAwesome;
   content: "\f0da";
   color: #003366;
   margin-right: 6px;
 }
-.link-list time {
+.link-list .time {
   color: #888;
   float: right;
   font-size: 13px;
@@ -251,7 +251,7 @@ a:hover {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
-.calendar-list li time {
+.calendar-list li .time {
   font-family: Georgia, Helvetica, Arial, sans-serif;
   position: absolute;
   left: 0;
@@ -261,7 +261,7 @@ a:hover {
   height: 46px;
   line-height: 23px;
 }
-.calendar-list li time span {
+.calendar-list li .time span {
   width: 100%;
   display: block;
   text-align: center;
@@ -269,20 +269,20 @@ a:hover {
   left: 0;
   transition: background-color 0.2s;
 }
-.calendar-list li time span:first-child {
+.calendar-list li .time span:first-child {
   top: 0;
   background-color: #003366;
   color: #e8e8e8;
 }
-.calendar-list li time span:last-child {
+.calendar-list li .time span:last-child {
   bottom: 0;
   background-color: #e8e8e8;
   color: #003366;
 }
-.calendar-list li:hover time span:first-child {
+.calendar-list li:hover .time span:first-child {
   background-color: #001933;
 }
-.calendar-list li:hover time span:last-child {
+.calendar-list li:hover .time span:last-child {
   background-color: #cfcfcf;
 }
 .image-list li {
@@ -308,12 +308,12 @@ a:hover {
   height: 100%;
   transition: transform 0.3s ease-out;
 }
-.image-list li time {
+.image-list li .time {
   font-family: Georgia, Helvetica, Arial, sans-serif;
   font-size: 13px;
   color: #888;
 }
-.image-list li time:before {
+.image-list li .time:before {
   font-family: FontAwesome;
   content: "\f017";
   margin-right: 10px;
@@ -343,3 +343,5 @@ a:hover {
 #friends img {
   width: 150px;
 }
+
+/*# sourceMappingURL=index.css.map */
