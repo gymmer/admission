@@ -129,22 +129,26 @@ a:hover {
   display: block;
 }
 .footer button {
-  border: none;
-  background-color: #336699;
+  border: 1px solid #eee;
+  border-left: 0;
+  background-color: #eee;
   transition: background-color 0.2s, color 0.2s;
-  color: #ccc;
+  color: #666;
 }
 .footer button:hover {
-  background-color: #003366;
+  border: 1px solid #eee;
+  border-left: 0;
+  background-color: #001933;
 }
 .footer input {
-  border: none;
+  border: 1px solid #eee;
+  border-right: 0;
   background-color: #eee;
 }
 .footer input:hover,
 .footer input:focus {
-  border: none;
-  background-color: #ddd;
+  border: 1px solid #eee;
+  border-right: 0;
 }
 #index-slider {
   width: 100%;
