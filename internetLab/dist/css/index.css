@@ -68,30 +68,37 @@ a:hover {
   border-top: 15px solid #003366;
   background-color: #F7F7F7;
 }
+#primary-header .primary-header-wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+#primary-header .row div:first-child {
+  padding-right: 0;
+}
+#primary-header .row div:last-child {
+  padding-left: 0;
+}
 #primary-header .logo {
   margin-right: 15px;
   width: auto;
   height: 60px;
+  float: left;
+  margin-top: 3px;
 }
 #primary-header h1 {
   margin: 0;
   padding: 0;
-  position: relative;
-  top: 5px;
   display: inline-block;
   font-family: 'simhei', '黑体', Helvetica, Arial, sans-serif;
-  font-size: 30px;
+  font-size: 29px;
   letter-spacing: 2px;
-  color: #003366;
+  color: #185daa;
   text-shadow: 1px 1px 8px #333;
 }
-#primary-header .primary-header-wrapper {
-  padding-top: 30px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #ddd;
-}
 #primary-nav {
-  background-color: #F7F8FA;
+  display: inline-block;
+  position: relative;
+  top: 30px;
 }
 #primary-nav .navbar {
   background-color: #F7F7F7;
@@ -105,6 +112,9 @@ a:hover {
 }
 #primary-nav li.dropDown.open > ul {
   display: block;
+}
+#nav-toggle {
+  z-index: 999;
 }
 .footer {
   background-color: #001933;
@@ -162,15 +172,20 @@ a:hover {
 #index-slider .bd li,
 #index-slider .bd img {
   width: 100%;
-  height: auto;
+  height: 360px;
 }
 #index-slider .maskBar {
   bottom: 0;
-  height: 40px;
-  line-height: 40px;
-  padding: 15px 0 15px 30px;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 25px;
+  padding-right: 25px;
   background-color: rgba(0, 0, 0, 0.8);
   font-size: 17px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 #index-slider .pagination {
   width: 100%;
@@ -340,12 +355,52 @@ a:hover {
   margin-bottom: 20px;
 }
 #friends li {
+  box-sizing: border-box;
+  text-align: center;
+  width: 200px;
+  height: 70px;
+  line-height: 70px;
+  overflow: hidden;
+  position: relative;
   display: inline-block;
-  padding: 0 30px;
-  margin-bottom: 30px;
+}
+#friends li:hover .hover-mask {
+  opacity: 1;
+  border: 35px solid rgba(0, 0, 0, 0.7);
+}
+#friends li:hover .hover-icon {
+  opacity: 1;
+  transform: scale(1, 1);
+  transition-delay: 0.3s;
+}
+#friends li .hover-icon {
+  background: url(../img/link.png) center no-repeat;
+  display: inline-block;
+  text-decoration: none;
+  padding: 0;
+  text-indent: -9999px;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: -28px;
+  opacity: 0;
+  transform: scale(0, 0);
+  transition: transform 0.2s 0.1s ease-in, opacity 0.1s ease-in-out;
+}
+#friends li .hover-mask {
+  width: 200px;
+  height: 70px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  overflow: visible;
+  border: 0px solid rgba(0, 0, 0, 0.7);
+  transition: all 0.4s ease-in-out;
+  box-sizing: border-box;
 }
 #friends img {
   width: 150px;
+  height: auto;
 }
-
-/*# sourceMappingURL=index.css.map */

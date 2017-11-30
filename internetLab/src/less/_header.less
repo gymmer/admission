@@ -4,34 +4,44 @@
     border-top: 15px solid @dark-blue;
     background-color: #F7F7F7;
     
+    .primary-header-wrapper {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .row {
+        div:first-child {
+            padding-right: 0;
+        }
+        div:last-child {
+            padding-left: 0;
+        }
+    }
     .logo {
         margin-right: 15px;
         width: auto;
         height: 60px;
+        float: left;
+        margin-top: 3px;
     }
     
     h1 {
         margin: 0;
         padding: 0;
-        position: relative;
-        top: 5px;
         display: inline-block;
         font-family: @font-simhei;
-        font-size: 30px;
+        font-size: 29px;
         letter-spacing: 2px;
-        color: @dark-blue;
+        color: #185daa;
         text-shadow: 1px 1px 8px #333;
-    }
-
-    .primary-header-wrapper {
-        padding-top: 30px;
-        padding-bottom: 20px;
-        border-bottom: 1px solid #ddd;
     }
 }
 
 #primary-nav {
-    background-color: #F7F8FA;
+    display: inline-block;
+    position: relative;
+    top: 30px;
+    
     .navbar {
         background-color: #F7F7F7;
     }
@@ -48,4 +58,8 @@
     li.dropDown.open > ul{
         display: block;
     }
+}
+
+#nav-toggle {
+    z-index: 999;
 }

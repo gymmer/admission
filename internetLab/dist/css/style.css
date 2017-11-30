@@ -68,30 +68,37 @@ a:hover {
   border-top: 15px solid #003366;
   background-color: #F7F7F7;
 }
+#primary-header .primary-header-wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+#primary-header .row div:first-child {
+  padding-right: 0;
+}
+#primary-header .row div:last-child {
+  padding-left: 0;
+}
 #primary-header .logo {
   margin-right: 15px;
   width: auto;
   height: 60px;
+  float: left;
+  margin-top: 3px;
 }
 #primary-header h1 {
   margin: 0;
   padding: 0;
-  position: relative;
-  top: 5px;
   display: inline-block;
   font-family: 'simhei', '黑体', Helvetica, Arial, sans-serif;
-  font-size: 30px;
+  font-size: 29px;
   letter-spacing: 2px;
-  color: #003366;
+  color: #185daa;
   text-shadow: 1px 1px 8px #333;
 }
-#primary-header .primary-header-wrapper {
-  padding-top: 30px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #ddd;
-}
 #primary-nav {
-  background-color: #F7F8FA;
+  display: inline-block;
+  position: relative;
+  top: 30px;
 }
 #primary-nav .navbar {
   background-color: #F7F7F7;
@@ -105,6 +112,9 @@ a:hover {
 }
 #primary-nav li.dropDown.open > ul {
   display: block;
+}
+#nav-toggle {
+  z-index: 999;
 }
 .footer {
   background-color: #001933;
@@ -322,12 +332,80 @@ a:hover {
   font-size: 13px;
   font-family: Georgia, Helvetica, Arial, sans-serif;
 }
-.article-pagination {
+.teachers-list li {
+  float: left;
+  margin: 20px 15px;
+}
+.teachers-list li:hover .hover-mask {
+  opacity: 1;
+  border: 95px solid rgba(0, 0, 0, 0.7);
+}
+.teachers-list li:hover .hover-icon {
+  opacity: 1;
+  transform: scale(1, 1);
+  transition-delay: 0.3s;
+}
+.teachers-list li:hover .teacher-name {
+  background-color: #003366;
+  color: #fff;
+}
+.teachers-list .teacher-photo {
+  box-sizing: border-box;
+  text-align: center;
+  width: 157px;
+  height: 190px;
+  line-height: 190px;
+  overflow: hidden;
+  position: relative;
+}
+.teachers-list .hover-icon {
+  background: url(../img/link.png) center no-repeat;
+  display: inline-block;
+  text-decoration: none;
+  padding: 0;
+  text-indent: -9999px;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: -28px;
+  opacity: 0;
+  transform: scale(0, 0);
+  transition: transform 0.2s 0.1s ease-in, opacity 0.1s ease-in-out;
+  top: -90px;
+  left: -30px;
+}
+.teachers-list .hover-mask {
+  width: 157px;
+  height: 190px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  overflow: visible;
+  border: 0px solid rgba(0, 0, 0, 0.7);
+  transition: all 0.4s ease-in-out;
+  box-sizing: border-box;
+}
+.teachers-list img {
+  width: 157px;
+  height: 190px;
+}
+.teachers-list .teacher-name {
+  width: 157px;
+  background-color: #e0e0e0;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: background-color 0.2s, color 0.2s;
+}
+.list-pagination {
   margin: 30px 0;
   text-align: center;
 }
-.article-pagination a,
-.article-pagination select {
+.list-pagination a,
+.list-pagination select {
   display: inline-block;
   text-align: center;
   width: 55px;
@@ -341,17 +419,15 @@ a:hover {
   cursor: pointer;
   transition: background-color, 0.2s;
 }
-.article-pagination a:hover,
-.article-pagination select:hover {
+.list-pagination a:hover,
+.list-pagination select:hover {
   background-color: #003366;
   color: #fff;
 }
-.article-pagination select {
+.list-pagination select {
   width: 70px;
 }
-.article-pagination select option {
+.list-pagination select option {
   color: #333;
   background-color: #fff;
 }
-
-/*# sourceMappingURL=style.css.map */

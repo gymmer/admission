@@ -3,6 +3,7 @@
 @import "_global";
 @import "_header";
 @import "_footer";
+@import "components/_mask";
 
 // 页面背景
 .main {
@@ -75,7 +76,7 @@
 }
 
 @media ( max-width : 768px) {
-	.paper {padding: 10px;}
+    .paper {padding: 10px;}
 }
 
 // 文章页
@@ -185,6 +186,7 @@
     }
 }
 
+// 文章标题形式的列表
 .article-list {
     li > a {
         display: block;
@@ -217,8 +219,64 @@
     }
 }
 
-// 文章分页
-.article-pagination {
+// 人物头像形式的列表
+.teachers-list {
+
+    @width: 157px;
+    @height: 190px;
+
+    li {
+        float: left;
+        margin: 20px 15px;
+
+        &:hover {
+            .hover-mask {
+                .mask-show(@height);
+            }
+
+            .hover-icon {
+                .icon-show();
+            }
+
+            .teacher-name {
+                background-color: @dark-blue;
+                color: #fff;
+            }
+        }
+    }
+
+    .teacher-photo {
+        .mask-wrapper(@width, @height);
+    }
+
+    .hover-icon {
+        .icon-hide();
+        top: -90px;
+        left: -30px;
+    }
+
+    .hover-mask {
+        .mask-hide(@width, @height);
+    }
+
+    img {
+        width: @width;
+        height: @height;
+    }
+
+    .teacher-name {
+        width: @width;
+        background-color: #e0e0e0;
+        padding: 10px;
+        text-align: center;
+        font-size: 14px;
+        box-sizing: border-box;
+        transition: background-color 0.2s, color 0.2s;
+    }
+}
+
+// 列表分页
+.list-pagination {
     margin: 30px 0;
     text-align: center;
 

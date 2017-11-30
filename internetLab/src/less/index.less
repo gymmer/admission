@@ -5,6 +5,7 @@
 @import "_footer";
 @import "components/_slider";
 @import "components/_calendar-card";
+@import "components/_mask";
 
 #index-slider {
     .thumbnail-slider();
@@ -153,12 +154,32 @@
     }
     
     li {
+        @width: 200px;
+        @height: 70px;
+        .mask-wrapper(@width, @height);
         display: inline-block;
-        padding: 0 30px;
-        margin-bottom: 30px;
+
+        &:hover {
+            .hover-mask {
+                .mask-show(@height);
+            }
+
+            .hover-icon {
+                .icon-show();
+            }
+        }
+
+        .hover-icon {
+            .icon-hide();
+        }
+    
+        .hover-mask {
+            .mask-hide(@width, @height);
+        }
     }
 
     img {
         width: 150px;
+        height: auto;
     }
 }
