@@ -72,33 +72,13 @@ a:hover {
   padding-top: 40px;
   padding-bottom: 40px;
 }
-#primary-header .row div:first-child {
-  padding-right: 0;
-}
-#primary-header .row div:last-child {
-  padding-left: 0;
-}
 #primary-header .logo {
-  margin-right: 15px;
-  width: auto;
-  height: 60px;
-  float: left;
-  margin-top: 3px;
-}
-#primary-header h1 {
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-  font-family: 'simhei', '黑体', Helvetica, Arial, sans-serif;
-  font-size: 29px;
-  letter-spacing: 2px;
-  color: #185daa;
-  text-shadow: 1px 1px 8px #333;
+  max-width: 100%;
 }
 #primary-nav {
   display: inline-block;
   position: relative;
-  top: 30px;
+  top: 40px;
 }
 #primary-nav .navbar {
   background-color: #F7F7F7;
