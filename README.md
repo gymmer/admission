@@ -17,6 +17,7 @@ Some static pages when I worked as a trainee in Center Of Information & Network 
 - 人地系统会议(conference)
 - G20中心(中文)(G20_CN)
 - G20中心(英文)(G20_EN)
+- 教学成果奖(award)
 - 师宏公司(shihong)
 - BB登陆页(bb)
 - 悬浮面板示例(hide-panel)  

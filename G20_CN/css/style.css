@@ -9,19 +9,18 @@ body {
 /* 头部logo */
 #primary-logo {
   background-color: #f0f0f0;
-  overflow: hidden;
+  padding: 20px 0;
 }
 #primary-logo img {
   max-width: 100%;
+  height: 40px;
 }
 
 /* 导航栏 */
 #primary-nav {
-  background-color: #f0f0f0;
   border-radius: 0;
   border: 0;
   margin: 0;
-  padding-top: 20px;
 }
 #primary-nav .navbar-nav > li > a,
 #primary-nav .navbar-brand {
@@ -231,19 +230,27 @@ body {
 .news-panel .panel-body {
   padding: 15px 0 0 0;
 }
-.news-panel ul,
-.news-panel li {
+.news-panel ul,     .news-panel li,
+.link-list ul,      .link-list li,
+.calendar-list ul,  .calendar-list li,
+.image-list ul,     .image-list li {
   padding: 0;
   margin: 0;
   list-style: none;
 }
-.news-panel a {
+.news-panel a,
+.link-list a,
+.calendar-list a,
+.image-list a {
   color: #333;
   font-size: 15px;
   font-family: "simsun", "宋体", Helvetica, Arial, sans-serif;
   transition: color 0.4s;
 }
-.news-panel a:hover {
+.news-panel a:hover,
+.link-list a:hover,
+.calendar-list a:hover,
+.image-list a:hover {
   color: #7F0000;
   text-decoration: none;
 }
@@ -370,4 +377,198 @@ body {
 }
 .image-list li:hover img {
   transform: scale(1.08);
+}
+
+/* 页面 */
+.main {
+  background: url(../img/page-bg.jpg) no-repeat center 0;
+}
+
+.paper {
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 50px;
+  padding: 40px 60px;
+  background: #fff url(../img/paper-side.jpg) repeat-y;
+  background-size: 100% 100%;
+  margin-top: 50px;
+}
+
+/* 频道信息 */
+.channel-info .breadcrumb {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #aaa;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.channel-info .breadcrumb a {
+  color: #aaa;
+}
+.channel-info .breadcrumb a:after {
+  content: ' >';
+}
+.channel-info .breadcrumb a:last-child:after {
+  content: '';
+}
+.channel-info .breadcrumb a:hover {
+  color: #7F0000;
+}
+.channel-info h4 {
+  border-bottom: 5px solid #ddd;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  color: #e1472f;
+  margin-bottom: 20px;
+}
+.channel-info span {
+  position: relative;
+  bottom: -5px;
+  border-bottom: 5px solid #f00;
+  display: inline-block;
+  padding: 0 20px 15px 20px;
+}
+
+/* 分页 */
+.list-pagination {
+  margin: 30px 0;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+.list-pagination .pagination-info {
+  color: #333;
+  margin-right: 20px;
+}
+.list-pagination .important {
+  color: #f00;
+}
+.list-pagination form {
+  display: inline-block;
+}
+.list-pagination a {
+  display: inline-block;
+  text-align: center;
+  width: 55px;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  color: #333;
+  transition: background-color, 0.2s;
+}
+.list-pagination a:hover {
+  background-color: #e1472f;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* 文章 */
+.article-info {
+  font-size: 12px;
+  text-align: center;
+}
+.article-info .publish-time {
+  margin-bottom: 15px;
+}
+.article-info img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+.article-attachment h4 {
+  border-top: 1px solid #ddd;
+  padding: 20px 0;
+  margin: 30px 0 0 0;
+  color: #e1472f;
+}
+.article-attachment h4 i {
+  margin-right: 1em;
+  transition: margin-right 0.2s;
+}
+.article-attachment:hover h4 i {
+  margin-right: 1.5em;
+}
+
+/* 教师列表 */
+.teachers-list ul,
+.teachers-list li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.teachers-list li {
+  float: left;
+  margin: 20px 15px;
+}
+.teachers-list li:hover a {
+  text-decoration: none;
+}
+.teachers-list li:hover .hover-mask {
+  opacity: 1;
+  border: 95px solid rgba(0, 0, 0, 0.7);
+}
+.teachers-list li:hover .hover-icon {
+  opacity: 1;
+  transform: scale(1, 1);
+  transition-delay: 0.3s;
+}
+.teachers-list li:hover .teacher-name {
+  background-color: #e1472f;
+  color: #fff;
+}
+.teachers-list .teacher-photo {
+  box-sizing: border-box;
+  text-align: center;
+  width: 157px;
+  height: 190px;
+  line-height: 190px;
+  overflow: hidden;
+  position: relative;
+}
+.teachers-list .hover-icon {
+  background: url(../img/link.png) center no-repeat;
+  display: inline-block;
+  text-decoration: none;
+  padding: 0;
+  text-indent: -9999px;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: -28px;
+  opacity: 0;
+  transform: scale(0, 0);
+  transition: transform 0.2s 0.1s ease-in, opacity 0.1s ease-in-out;
+  top: -90px;
+  left: -30px;
+}
+.teachers-list .hover-mask {
+  width: 157px;
+  height: 190px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  overflow: visible;
+  border: 0px solid rgba(0, 0, 0, 0.7);
+  transition: all 0.4s ease-in-out;
+  box-sizing: border-box;
+}
+.teachers-list img {
+  width: 157px;
+  height: 190px;
+}
+.teachers-list .teacher-name {
+  width: 157px;
+  color: #333;
+  background-color: #e0e0e0;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: background-color 0.2s, color 0.2s;
 }

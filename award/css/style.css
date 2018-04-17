@@ -1,0 +1,241 @@
+@charset "UTF-8";
+/* 通用的样式 */
+body {
+  font-size: 15px;
+  box-sizing: border-box;
+  min-width: 1170px;
+}
+
+.wrapper {
+  width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+a {
+  color: #333;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #003c7c;
+}
+a:link, a:hover, a:active, a:visited {
+  text-decoration: none;
+}
+
+.title {
+  font-family: "宋体","SimSun","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 20px;
+  color: #666;
+  font-weight: bold;
+}
+
+/* 头部 */
+.page-header {
+  padding: 0;
+  margin: 0;
+  height: 130px;
+  line-height: 130px;
+  background: url(../images/head-bg.png) no-repeat center right;
+}
+.page-header img {
+  max-width: 100%;
+  height: 80px;
+}
+
+/* 主要内容 */
+.page-body {
+  margin: 40px 0 80px 0;
+}
+
+/* 页脚 */
+.page-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: #323232;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+}
+.page-footer .separator {
+  display: inline-block;
+  width: 2px;
+  height: 10px;
+  background-color: #aaa;
+  margin: 0 20px;
+}
+
+/* 返回顶部 */
+#go-to-top {
+  position: fixed;
+  right: 35px;
+  bottom: 60px;
+  display: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-image: url(../images/topback.png);
+  background-size: cover;
+}
+#go-to-top:hover {
+  background-image: url(../images/topback_hover.png);
+}
+
+/* 首页表格 */
+#index-table {
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+}
+#index-table th {
+  background-color: #E1EEFF;
+}
+#index-table tbody tr:hover {
+  cursor: pointer;
+  color: #003c7c;
+}
+#index-table tbody tr td:nth-child(1){
+  width: 8%;
+}
+#index-table tbody tr td:nth-child(2){
+  width: 40%;
+}
+#index-table tbody tr td:nth-child(3){
+  width: 40%;
+}
+#index-table tbody tr td:nth-child(4){
+  width: 12%;
+}
+
+/* 侧边栏 */
+.sidebar,
+.sidebar li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sidebar li.active a{
+  font-weight: bold;
+  color: #36547B;
+}
+.sidebar a {
+  display: block;
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #f1f1f1;
+  padding-left: 20px;
+  background: #fff;
+  transition: background 0.3s ease-out;
+}
+.sidebar a:after {
+  position: absolute;
+  font-family: FontAwesome;
+  content: "\f138";
+  right: 15px;
+  color: #c8c8c8;
+  transition: all 0.3s ease-out;
+}
+.sidebar a:hover {
+  background: #f1f1f1;
+}
+.sidebar li.active a:after {
+  color: #36547B;
+}
+.sidebar a:hover:after {
+  right: 30px;
+  color: #36547B;
+}
+.sidebar i {
+  margin-right: 10px;
+}
+
+/* 项目栏目 */
+.project-info {
+  position: relative;
+}
+#project-name {
+  margin: 15px 0 10px 0;
+  padding: 0 0 15px 0;
+  border-bottom: 5px solid #f0f0f0;
+}
+.project-info .back-home {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  color: #666;
+  font-size: 14px;
+}
+.project-info .back-home:hover {
+  color: #003c7c;
+}
+.project-info i {
+  margin-right: 5px;
+}
+
+/* 链接列表 */
+.link-list,
+.link-list li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.link-list li {
+  background-color: #fff;
+  transition: background-color 0.2s;
+}
+.link-list li:hover {
+  background-color: #f1f1f1;
+}
+.link-list a {
+  display: block;
+  padding: 8px;
+}
+.link-list a:before {
+  font-family: FontAwesome;
+  content: "\f0da";
+  color: #36547B;
+  margin-right: 10px;
+}
+
+/* 视频列表 */
+.video-list, .video-list li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.video-list li {
+  width: 320px;
+  float: left;
+  background-color: #fafafa;
+  margin: 15px 20px;
+}
+.video-list h5 {
+  padding: 10px;
+  width: 320px;
+  margin: 0;
+  position: relative;
+  top: -6px;
+  background-color: #fafafa;
+}
+.video-list .video-wrapper {
+  position: relative;
+  width: 320px;
+  height: 240px;
+  cursor: pointer;
+}
+.video-list .play-video {
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  font-size: 50px;
+  color: #36547B;
+  transition: color 0.3s;
+}
+.video-list .video-wrapper:hover .play-video {
+  color: #003c7c;
+}
